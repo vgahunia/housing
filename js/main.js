@@ -33,8 +33,7 @@ window.onload = function() {
                 return component.types[0] == "postal_code";
             });
             zip = postalCode.long_name;
-            $('#target').html(zip);
-            getData();
+            getData(zip);
           })
         } else {
           error('Google did not return any results.');
@@ -43,30 +42,41 @@ window.onload = function() {
         error("Reverse Geocoding failed due to: " + status);
       }
     });
-
   }
 
   var data1 = JSON.stringify(housingData);
   var data = JSON.parse(data1);
-  function getData() {
+  function getData(zipCode) {
     for (var i=0; i<data.length;i++) {
-      if (data[i].zip == zip) {
-        data1 = data[i].airPollution;
-        data2 = data[i].waterViolation;
-        data3 = data[i].housingProblems;
-        data4 = data[i].driveAlone;
-        data5 = data[i].driveAloneLongCommute;
+      if (data[i].zip == zipCode) {
+        var data1 = data[i].airPollution;
+        var data2 = data[i].waterViolation;
+        var data3 = data[i].housingProblems;
+        var data4 = data[i].driveAlone;
+        var data5 = data[i].driveAloneLongCommute;
         writeData(data1, data2, data3, data4, data5);
       }
     }
+    console.log(zipCode);
   }
   function writeData(air, water, housing, drive, driveLong) {
+    $('#target').html(zip);
+    $('#zipInput').show();
     $('#dataPoint1 p').html(air);
     $('#dataPoint2 p').html(water);
     $('#dataPoint3 p').html(housing);
     $('#dataPoint4 p').html(drive);
     $('#dataPoint5 p').html(driveLong);
   }
+
+  function newZip() {
+    var newZipValue = document.getElementById('zipValue').value;
+    getData(newZipValue);
+  }
+
+  $('#zipClick').click(function() {
+    newZip();
+  })
   
 }
 
