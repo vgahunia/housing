@@ -68,7 +68,9 @@ window.onload = function() {
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var data1 = JSON.stringify(housingData);
   var data = JSON.parse(data1);
-
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
   function getData(county, state) {
     for (var i=0; i<data.length;i++) {
       if (data[i].county.toLowerCase() == county && data[i].state.toLowerCase() == state) {
@@ -77,7 +79,9 @@ window.onload = function() {
         var data3 = data[i].housingProblems;
         var data4 = data[i].driveAlone;
         var data5 = data[i].driveAloneLongCommute;
-        var data6 = data[i].state
+        var data6 = data[i].state;
+        county =county.capitalize()
+        state=state.capitalize();
         writeData(county, state, data1, data2, data3, data4, data5);
       }
     }
