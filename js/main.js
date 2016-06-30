@@ -16,16 +16,16 @@ window.onload = function() {
   function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
+            x.innerHTML = "User denied the request for Geolocation. Please enter information in the fields below."
             break;
         case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
+            x.innerHTML = "Location information is unavailable. Please enter information in the fields below."
             break;
         case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
+            x.innerHTML = "The request to get user location timed out. Please enter information in the fields below."
             break;
         case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
+            x.innerHTML = "An unknown error occurred. Please enter information in the fields below."
             break;
     }
 }
@@ -35,7 +35,7 @@ window.onload = function() {
   function getAddress(latitude, longitude) {
       // set up the Geocoder object
       var geocoder = new google.maps.Geocoder();
-   
+  
       // turn coordinates into an object
       var yourLocation = new google.maps.LatLng(latitude, longitude);
    
