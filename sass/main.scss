@@ -5,3 +5,18 @@ h1{
 #countyInput{
 	display:none;
 }
+
+.show {
+    position: relative;
+    /* necessary to absolutely position the images inside */
+    /* same as the images inside */
+    height: 100px;
+}
+.show div {
+    position: absolute;
+    display: none;
+}
+.show div:first-child {
+    display: block;
+    /* overrides the previous style */
+}
