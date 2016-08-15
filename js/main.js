@@ -1,5 +1,6 @@
 
 window.onload = function() {
+
 	var x = document.getElementById("target");
 	function getLocation() {
 	    if (navigator.geolocation) {
@@ -68,6 +69,11 @@ window.onload = function() {
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var data1 = JSON.stringify(housingData);
   var data = JSON.parse(data1);
+
+  var data2 = JSON.stringify(zipData);
+  var dataZip = JSON.parse(data2);
+  console.log(dataZip[2].zip)
+
   String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
