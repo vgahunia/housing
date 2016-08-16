@@ -6,38 +6,35 @@
 
 </head>
 
-<body>
-
-	<div class="modal fade">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	        <h4 class="modal-title">Modal title</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>One fine body&hellip;</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+<body ng-app="">
+	<img src="img/backgroundFull.png" id="map">
+	<!-- Modal 1 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">This is Modal #1</h4>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li id="one">One</li>
+						<li id="two">Two</li>
+						<li id="three">Three</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary closeButton" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="col-sm-4"></div>
 	<div class="col-sm-4">
 	<h1>Hello</h1>
 
 	<div id="target"></div>
-	<div id="zipInput">
-		<p>If this is incorrect, enter your county name here</p>
-		<input type="text" placeholder="zip" id="zipValue"/>
-		<input type="button" value="Here" id="zipClick"/>
-
+	<div id="zipInput" ng-include="'includes/zip.html'">
 	</div>
 	
 	<div class="show">
@@ -67,6 +64,7 @@
   <script type="text/javascript" src="js/zip.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 

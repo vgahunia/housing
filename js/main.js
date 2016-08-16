@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $('#myModal').modal('show');
+});
 
 window.onload = function() {
 
