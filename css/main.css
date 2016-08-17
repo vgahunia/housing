@@ -2,6 +2,38 @@
   position: fixed;
   width: 100%; }
 
+#banner {
+  width: 122.5%;
+  position: relative;
+  top: 20px;
+  left: -67px;
+  z-index: 3; }
+
+#openModal .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0; }
+
+#openModal .modal-header {
+  padding-bottom: 5px; }
+  #openModal .modal-header p {
+    text-align: center; }
+
+#openModal .modal-body {
+  text-align: center;
+  margin: 0 auto;
+  width: 340px;
+  padding-top: 0; }
+  #openModal .modal-body .mapLink {
+    margin: 0 auto;
+    float: left;
+    width: 100px; }
+    #openModal .modal-body .mapLink img {
+      width: 40px; }
+    #openModal .modal-body .mapLink h5 {
+      color: #143c69;
+      margin-top: 5px;
+      font-size: 9pt; }
+
 h1 {
   color: blue; }
 
@@ -21,3 +53,6 @@ h1 {
 .show div:first-child {
   display: block;
   /* overrides the previous style */ }
+
+form {
+  padding-top: 20px; }

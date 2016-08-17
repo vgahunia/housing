@@ -8,55 +8,64 @@
 
 <body ng-app="">
 	<img src="img/backgroundFull.png" id="map">
+
 	<!-- Modal 1 -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
 		<div class="modal-dialog" role="document">
+			<img src="img/banner.png" alt="" id="banner">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="myModalLabel">This is Modal #1</h4>
+					<p>Where you live affects your health. Pick which most<br> resembles where you live and then use your mouse to ride a bike<br> through your area and see which factors impact health.</p>
 				</div>
 				<div class="modal-body">
-					<ul>
-						<li id="one">One</li>
-						<li id="two">Two</li>
-						<li id="three">Three</li>
-					</ul>
+					<div>
+						<div class="mapLink">
+							<img src="img/iconCity.png" alt="">
+							<h5>CITY</h5>
+						</div>
+						<div class="mapLink">
+							<img src="img/iconSuburb.png" alt="">
+							<h5>SUBURB</h5>
+						</div>
+						<div class="mapLink">
+							<img src="img/iconRural.png" alt="">
+							<h5>RURAL</h5>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary closeButton" data-dismiss="modal">Close</button>
+					<!-- <button type="button" class="btn btn-secondary closeButton" data-dismiss="modal">Close</button> -->
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-sm-4"></div>
-	<div class="col-sm-4">
-	<h1>Hello</h1>
 
-	<div id="target"></div>
-	<div id="zipInput" ng-include="'includes/zip.html'">
+	<div class="col-sm-4">
+		
+		<div class="show">
+			<div id="dataPoint1">
+				<h1>Air Pollution:</h1>
+				<p></p>
+			</div>
+			<div id="dataPoint2">
+				<h1>Water Violation:</h1>
+				<p></p>
+			</div>
+			<div id="dataPoint3">
+				<h1>Housing Problems:</h1>
+				<p></p>
+			</div>
+			<div id="dataPoint4">
+				<h1>Drive Alone:</h1>
+				<p></p>
+			</div>
+		</div>
+				<button id="prev">Prev</button>
+			<button id="next">Next</button>
 	</div>
-	
-	<div class="show">
-		<div id="dataPoint1">
-			<h1>Air Pollution:</h1>
-			<p></p>
-		</div>
-		<div id="dataPoint2">
-			<h1>Water Violation:</h1>
-			<p></p>
-		</div>
-		<div id="dataPoint3">
-			<h1>Housing Problems:</h1>
-			<p></p>
-		</div>
-		<div id="dataPoint4">
-			<h1>Drive Alone:</h1>
-			<p></p>
-		</div>
-	</div>
-			<button id="prev">Prev</button>
-		<button id="next">Next</button>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFQqre9L6qnIiGrpvkQMdMK-c6Z5D5HJU"
   type="text/javascript"></script>
