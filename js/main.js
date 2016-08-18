@@ -79,6 +79,18 @@ window.onload = function() {
         $next.css('z-index', 1);
     });
   }
+
+  // links to different parts of map
+
+  $('#city img').click(function() {
+    $('#map').removeClass().addClass('city');
+  })
+  $('#suburb img').click(function() {
+    $('#map').removeClass().addClass('suburb');
+  })
+    $('#rural img').click(function() {
+    $('#map').removeClass().addClass('rural');
+  })
 }
 // END
 //  var x = document.getElementById("target");

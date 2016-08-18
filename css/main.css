@@ -1,6 +1,24 @@
 #map {
-  position: fixed;
-  width: 100%; }
+  position: absolute;
+  width: 2400px;
+  left: -600px;
+  top: -100px;
+  transition: all 1s ease; }
+
+#map.city {
+  left: -2700px;
+  top: -650px;
+  width: 4400px; }
+
+#map.suburb {
+  left: -1200px;
+  top: -650px;
+  width: 4400px; }
+
+#map.rural {
+  left: -100px;
+  top: -650px;
+  width: 4400px; }
 
 #banner {
   width: 122.5%;
@@ -14,25 +32,48 @@
   border-radius: 0; }
 
 #openModal .modal-header {
+  margin-bottom: 0;
   padding-bottom: 5px; }
   #openModal .modal-header p {
     text-align: center; }
 
 #openModal .modal-body {
-  text-align: center;
-  margin: 0 auto;
-  width: 340px;
+  width: 100%;
   padding-top: 0; }
-  #openModal .modal-body .mapLink {
-    margin: 0 auto;
-    float: left;
-    width: 100px; }
-    #openModal .modal-body .mapLink img {
-      width: 40px; }
-    #openModal .modal-body .mapLink h5 {
-      color: #143c69;
-      margin-top: 5px;
-      font-size: 9pt; }
+  #openModal .modal-body .modalCopy {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center; }
+  #openModal .modal-body .mapLinks {
+    width: 310px;
+    margin: 0 auto; }
+    #openModal .modal-body .mapLinks .mapLink {
+      text-align: center;
+      float: left;
+      width: 100px;
+      margin-bottom: 10px; }
+      #openModal .modal-body .mapLinks .mapLink img {
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        transition: all .3s ease; }
+      #openModal .modal-body .mapLinks .mapLink img:hover {
+        width: 40px; }
+      #openModal .modal-body .mapLinks .mapLink h5 {
+        color: #143c69;
+        margin-top: 5px;
+        font-size: 9pt; }
+  #openModal .modal-body .socialLinks {
+    margin: 30px auto;
+    width: 165px;
+    position: relative; }
+    #openModal .modal-body .socialLinks .social {
+      float: left;
+      padding-top: 15px;
+      padding: 5px; }
+      #openModal .modal-body .socialLinks .social img {
+        text-align: center;
+        width: 30px; }
 
 h1 {
   color: blue; }
