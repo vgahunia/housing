@@ -90,15 +90,20 @@
 h1{
 	color:blue;
 }
-
-#countyInput{
+.bikeScene{
+    img{
+        width:90px;
+    }
+    #bike{
+        width:70px;
+    }
+}
+.dataPoints{
 	display:none;
 }
 
 .show {
     position: relative;
-    /* necessary to absolutely position the images inside */
-    /* same as the images inside */
     height: 100px;
 }
 .show div {
@@ -107,7 +112,6 @@ h1{
 }
 .show div:first-child {
     display: block;
-    /* overrides the previous style */
 }
 form{
     padding-top: 20px;

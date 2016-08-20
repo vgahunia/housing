@@ -1,5 +1,17 @@
 $(document).ready(function(){
     $('#openModal').modal('show');
+    $('#city img').click(function() {
+    $('#map').removeClass().addClass('city');
+    $('#openModal').modal('hide');
+  });
+  $('#suburb img').click(function() {
+    $('#map').removeClass().addClass('suburb');
+    $('#openModal').modal('hide');
+  });
+  $('#rural img').click(function() {
+    $('#map').removeClass().addClass('rural');
+    $('#openModal').modal('hide');
+  });
 });
 
 window.onload = function() {
@@ -84,13 +96,16 @@ window.onload = function() {
 
   $('#city img').click(function() {
     $('#map').removeClass().addClass('city');
-  })
+    $('#openModal').modal('hide');
+  });
   $('#suburb img').click(function() {
     $('#map').removeClass().addClass('suburb');
-  })
-    $('#rural img').click(function() {
+    $('#openModal').modal('hide');
+  });
+  $('#rural img').click(function() {
     $('#map').removeClass().addClass('rural');
-  })
+    $('#openModal').modal('hide');
+  });
 }
 // END
 //  var x = document.getElementById("target");
