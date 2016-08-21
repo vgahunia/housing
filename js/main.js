@@ -1,17 +1,39 @@
 $(document).ready(function(){
     $('#openModal').modal('show');
-    $('#city img').click(function() {
-    $('#map').removeClass().addClass('city');
-    $('#openModal').modal('hide');
-  });
-  $('#suburb img').click(function() {
-    $('#map').removeClass().addClass('suburb');
-    $('#openModal').modal('hide');
-  });
-  $('#rural img').click(function() {
-    $('#map').removeClass().addClass('rural');
-    $('#openModal').modal('hide');
-  });
+
+    $('#yellow').click(function() {
+      $('#yellowModal').modal('show');
+    })
+    $('#red').click(function() {
+      $('#redModal').modal('show');
+    })
+    $('#green').click(function() {
+      $('#greenModal').modal('show');
+    })  
+    $('#blue').click(function() {
+      $('#blueModal').modal('show');
+    })
+
+    $('#yellowModal .dataButton').click(function() {
+      $('#yellowModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.dataPoints').show();
+    })
+    $('#redModal .dataButton').click(function() {
+      $('#redModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.dataPoints').show();
+    })
+    $('#greenModal .dataButton').click(function() {
+      $('#greenModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.dataPoints').show();
+    })
+    $('#blueModal .dataButton').click(function() {
+      $('#blueModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.dataPoints').show();
+    })
 });
 
 window.onload = function() {
@@ -97,14 +119,17 @@ window.onload = function() {
   $('#city img').click(function() {
     $('#map').removeClass().addClass('city');
     $('#openModal').modal('hide');
+    $('.bikeScene').show();
   });
   $('#suburb img').click(function() {
     $('#map').removeClass().addClass('suburb');
     $('#openModal').modal('hide');
+    $('.bikeScene').show();
   });
   $('#rural img').click(function() {
     $('#map').removeClass().addClass('rural');
     $('#openModal').modal('hide');
+    $('.bikeScene').show();
   });
 }
 // END

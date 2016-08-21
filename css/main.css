@@ -78,11 +78,14 @@
 h1 {
   color: blue; }
 
-.bikeScene img {
-  width: 90px; }
-
-.bikeScene #bike {
-  width: 70px; }
+.bikeScene {
+  display: none;
+  position: relative;
+  top: 400px; }
+  .bikeScene img {
+    width: 90px; }
+  .bikeScene #bike {
+    width: 70px; }
 
 .dataPoints {
   display: none; }

@@ -9,32 +9,19 @@
 <body ng-app="">
 	<img src="img/backgroundFull.png" id="map">
 
-	<!-- Modal 1 -->
-	<div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-		<div class="modal-dialog" role="document">
-			<img src="img/banner.png" alt="" id="banner">
-			<div class="modal-content">
-				<div class="modal-body" ng-include="'includes/openModal.html'">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- END Modal 1 -->
-
 	<div class="col-sm-4"></div>
 
 	<div class="col-sm-4">
 <!-- Bike Scene -->
 		<div class="bikeScene">
 			<img id="bike" src="img/bike.png">
-			<img src="img/iconGreen.png">
-			<img src="img/iconRed.png">
-			<img src="img/iconYellow.png">
-			<img src="img/iconBlue.png" alt="">
+			<img id="green" src="img/iconGreen.png">
+			<img id="red" src="img/iconRed.png">
+			<img id="yellow" src="img/iconYellow.png">
+			<img id="blue" src="img/iconBlue.png" alt="">
 		</div>
-
 <!-- END Bike Scene -->
+
 		<div class="dataPoints">
 			<div ng-include="'includes/zip.html'"></div>
 			<div class="show">
@@ -61,9 +48,65 @@
 	</div>
 
 <!-- ALL MODALS-->
-
-
-
+<!-- Modal - OpenModal -->
+	<div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<img src="img/banner.png" alt="" id="banner">
+			<div class="modal-content">
+				<div class="modal-body" ng-include="'includes/openModal.html'">
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END OpenModal -->
+<!-- Modal - Yellow -->
+	<div class="modal fade" id="yellowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>Yellow</p>
+					<button class="dataButton">Data</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END Yellow -->
+<!-- Modal - Red -->
+	<div class="modal fade" id="redModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>Red</p>
+					<button class="dataButton">Data</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END Red -->
+<!-- Modal - Green-->
+	<div class="modal fade" id="greenModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>Green</p>
+					<button class="dataButton">Data</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END Green -->
+<!-- Modal - Blue -->
+	<div class="modal fade" id="blueModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>Blue</p>
+					<button class="dataButton">Data</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END Blue -->
 <!-- END ALL MODALS-->
 
 
