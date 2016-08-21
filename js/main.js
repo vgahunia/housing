@@ -142,6 +142,18 @@ window.onload = function() {
     setTimeout(function() {
       $('#bike').addClass('ride');
     }, 300);
+    setTimeout(function() {
+      $('#yellow').css('opacity','1').addClass('bounce');
+    }, 1200);
+    setTimeout(function() {
+      $('#blue').css('opacity','1').addClass('bounce');
+    }, 1600);
+    setTimeout(function() {
+      $('#green').css('opacity','1').addClass('bounce');
+    }, 2000);
+    setTimeout(function() {
+      $('#red').css('opacity','1').addClass('bounce');
+    }, 2400);
     
   }
 }
