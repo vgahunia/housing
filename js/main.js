@@ -15,25 +15,20 @@ $(document).ready(function(){
     })
 
     $('#yellowModal .dataButton').click(function() {
-      $('#yellowModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.show #dataPoint3').addClass('selected');
-      $('.dataPoints').show();
+      $('.contentYellow').hide();
+      $('#yellowModal .zipField').show();
     })
     $('#redModal .dataButton').click(function() {
-      $('#redModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.dataPoints').show();
+      $('.contentRed').hide();
+      $('#redModal .zipField').show();
     })
     $('#greenModal .dataButton').click(function() {
-      $('#greenModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.dataPoints').show();
+      $('.contentGreen').hide();
+      $('#greenModal .zipField').show();
     })
     $('#blueModal .dataButton').click(function() {
-      $('#blueModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.dataPoints').show();
+      $('.contentBlue').hide();
+      $('#blueModal .zipField').show();
     })
 });
 
@@ -89,9 +84,37 @@ window.onload = function() {
     getZip(newZipValue);
   }
 
-  $('#zipClick').click(function() {
+  // $('#zipClick').click(function() {
+  //   newZip();
+  // })
+  $('#yellowModal #zipClick').click(function() {
     newZip();
-  })
+    $('#yellowModal').modal('hide');
+    $('.bikeScene').hide();
+    $('.show #dataPoint1').addClass('selected');
+    $('.dataPoints').show();
+  });
+  $('#redModal #zipClick').click(function() {
+    newZip();
+    $('#redModal').modal('hide');
+    $('.bikeScene').hide();
+    $('.show #dataPoint3').addClass('selected');
+    $('.dataPoints').show();
+  });
+  $('#greenModal #zipClick').click(function() {
+    newZip();
+    $('#greenModal').modal('hide');
+    $('.bikeScene').hide();
+    $('.show #dataPoint4').addClass('selected');
+    $('.dataPoints').show();
+  });
+  $('#blueModal #zipClick').click(function() {
+    newZip();
+    $('#blueModal').modal('hide');
+    $('.bikeScene').hide();
+    $('.show #dataPoint2').addClass('selected');
+    $('.dataPoints').show();
+  });
 
   $('#next').on('click', getNext);
   $('#prev').on('click', getPrev);
