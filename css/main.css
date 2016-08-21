@@ -98,7 +98,7 @@ h1 {
   position: absolute;
   display: none; }
 
-.show div:first-child {
+.show .selected {
   display: block; }
 
 form {

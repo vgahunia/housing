@@ -17,6 +17,7 @@ $(document).ready(function(){
     $('#yellowModal .dataButton').click(function() {
       $('#yellowModal').modal('hide');
       $('.bikeScene').hide();
+      $('.show #dataPoint3').addClass('selected');
       $('.dataPoints').show();
     })
     $('#redModal .dataButton').click(function() {
@@ -96,15 +97,19 @@ window.onload = function() {
   $('#prev').on('click', getPrev);
 
   function getNext() {
-    var $curr = $('.show div:visible'),
+    var $curr = $('.show .selected'),
         $next = ($curr.next().length) ? $curr.next() : $('.show div').first();
-    transition($curr, $next);
+    $curr.removeClass('selected');
+    $next.addClass('selected');
+    // transition($curr, $next);
   }
 
   function getPrev() {
-    var $curr = $('.show div:visible'),
+    var $curr = $('.show .selected'),
         $next = ($curr.prev().length) ? $curr.prev() : $('.show div').last();
-    transition($curr, $next);
+    $curr.removeClass('selected');
+    $next.addClass('selected');
+    // transition($curr, $next);
   }
 
   function transition($curr, $next) {
