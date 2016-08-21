@@ -1,9 +1,19 @@
-#map{
+body{
+    width: 1240px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.mapBack{
+    width:1240px;
+    overflow: hidden;
     position: absolute;
-    width:2400px;
-    left:-600px;
-    top:-100px;
-    transition:all 1s ease;
+    #map{
+        position: relative;
+        transition:all 1s ease;
+        width:2400px;
+        left:-600px;
+        top:-100px;
+    }
 }
 #map.city{
     left:-2700px;
@@ -16,7 +26,7 @@
     width:4400px;
 }
 #map.rural{
-    left:-100px;
+    left:-50px;
     top:-650px;
     width:4400px;
 }
@@ -27,6 +37,9 @@
     left:-67px;
     z-index: 3;
 }
+/* ==============================================
+---------------- OPEN  MODAL --------------------
+================================================ */
 #openModal{
     .modal-content{
         background-color: rgba(255, 255, 255, .8);
@@ -87,24 +100,49 @@
         }
     }
 }
-h1{
-	color:blue;
+
+/* ==============================================
+------------------- BIKE  SCENE -----------------
+================================================ */
+.containerBike{
+
 }
 .bikeScene{
     display:none;
-    position: relative;
+    position: absolute;
     top:400px;
     img{
         width:90px;
     }
     #bike{
-        width:70px;
+        width:150px;
+        position:relative;
+        top:-30px;
+        left:-460px;
+        opacity:0;
+        transition: all 1.2s ease-out;
+    }
+    #bike.ride{
+        left:50px;
+        opacity: 1;
+    }
+    #yellow{
+        position: relative;
+        top:-450px;
+        left:100px;
+    }
+    #blue{
+        position:relative;
+        left:50px;
     }
 }
+
+/* ==============================================
+--------------------- DATA ----------------------
+================================================ */
 .dataPoints{
 	display:none;
 }
-
 .show {
     position: relative;
     height: 100px;

@@ -6,44 +6,49 @@
 
 </head>
 
-<body ng-app="">
-	<img src="img/backgroundFull.png" id="map">
+<body ng-app="" class="container-fluid">
+	<div class="mapBack">
+		<img src="img/backgroundFull.png" id="map">
+	</div>
 
-	<div class="col-sm-4"></div>
 
-	<div class="col-sm-4">
-<!-- Bike Scene -->
-		<div class="bikeScene">
-			<img id="bike" src="img/bike.png">
-			<img id="green" src="img/iconGreen.png">
-			<img id="red" src="img/iconRed.png">
-			<img id="yellow" src="img/iconYellow.png">
-			<img id="blue" src="img/iconBlue.png" alt="">
-		</div>
-<!-- END Bike Scene -->
+  <div class="col-sm-12">
+		<div class="col-sm-4"></div>
 
-		<div class="dataPoints">
-			<div ng-include="'includes/zip.html'"></div>
-			<div class="show">
-				<div id="dataPoint1">
-					<h1>Air Pollution:</h1>
-					<p></p>
-				</div>
-				<div id="dataPoint2">
-					<h1>Water Violation:</h1>
-					<p></p>
-				</div>
-				<div id="dataPoint3">
-					<h1>Housing Problems:</h1>
-					<p></p>
-				</div>
-				<div id="dataPoint4">
-					<h1>Drive Alone:</h1>
-					<p></p>
-				</div>
+		<div class="col-sm-4" class="containerBike">
+	<!-- Bike Scene -->
+			<div class="bikeScene">
+				<img id="bike" src="img/bike.png">
+				<img id="green" src="img/iconGreen.png">
+				<img id="red" src="img/iconRed.png">
+				<img id="yellow" src="img/iconYellow.png">
+				<img id="blue" src="img/iconBlue.png" alt="">
 			</div>
-			<button id="prev">Prev</button>
-			<button id="next">Next</button>
+	<!-- END Bike Scene -->
+
+			<div class="dataPoints">
+				<div ng-include="'includes/zip.html'"></div>
+				<div class="show">
+					<div id="dataPoint1">
+						<h1>Air Pollution:</h1>
+						<p></p>
+					</div>
+					<div id="dataPoint2">
+						<h1>Water Violation:</h1>
+						<p></p>
+					</div>
+					<div id="dataPoint3">
+						<h1>Housing Problems:</h1>
+						<p></p>
+					</div>
+					<div id="dataPoint4">
+						<h1>Drive Alone:</h1>
+						<p></p>
+					</div>
+				</div>
+				<button id="prev">Prev</button>
+				<button id="next">Next</button>
+			</div>
 		</div>
 	</div>
 

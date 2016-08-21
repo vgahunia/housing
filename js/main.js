@@ -124,18 +124,26 @@ window.onload = function() {
   $('#city img').click(function() {
     $('#map').removeClass().addClass('city');
     $('#openModal').modal('hide');
-    $('.bikeScene').show();
+    bikeScene();
   });
   $('#suburb img').click(function() {
     $('#map').removeClass().addClass('suburb');
     $('#openModal').modal('hide');
-    $('.bikeScene').show();
+    bikeScene();
   });
   $('#rural img').click(function() {
     $('#map').removeClass().addClass('rural');
     $('#openModal').modal('hide');
-    $('.bikeScene').show();
+    bikeScene();
   });
+
+  function bikeScene() {
+    $('.bikeScene').show();
+    setTimeout(function() {
+      $('#bike').addClass('ride');
+    }, 300);
+    
+  }
 }
 // END
 //  var x = document.getElementById("target");
