@@ -268,10 +268,38 @@ body{
 ================================================ */
 .dataPoints{
 	display:none;
+    margin-top: 30px;
+    .dataIcon{
+        width:70px;
+        display:block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    p, h3{
+        text-align: center;
+        width:192px;
+        margin:0 auto;
+    }
+    .yellowValue p, .yellowValue h3{
+        color:rgb(255,201,10);
+    }
+    .redValue p, .redValue h3{
+        color:rgb(230,29,37);
+    }
+    .blueValue p, .blueValue h3{
+        color:rgb(26,144,208);
+    }
+    .greenValue p, .greenValue h3{
+        color:rgb(43,179,75);
+    }
+}
+.dataValue{
+    font-size: 20pt;
+    font-weight: bold;
 }
 .show {
     position: relative;
-    height: 100px;
+    height: 300px;
 }
 .show div {
     position: absolute;
@@ -282,4 +310,10 @@ body{
 }
 form{
     padding-top: 20px;
+}
+.dataButtons img{
+    width: 25px;
+    position: relative;
+    top:70px;
+    cursor: pointer;
 }

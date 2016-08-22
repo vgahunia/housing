@@ -294,11 +294,33 @@ body {
 --------------------- DATA ----------------------
 ================================================ */
 .dataPoints {
-  display: none; }
+  display: none;
+  margin-top: 30px; }
+  .dataPoints .dataIcon {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+  .dataPoints p, .dataPoints h3 {
+    text-align: center;
+    width: 192px;
+    margin: 0 auto; }
+  .dataPoints .yellowValue p, .dataPoints .yellowValue h3 {
+    color: #ffc90a; }
+  .dataPoints .redValue p, .dataPoints .redValue h3 {
+    color: #e61d25; }
+  .dataPoints .blueValue p, .dataPoints .blueValue h3 {
+    color: #1a90d0; }
+  .dataPoints .greenValue p, .dataPoints .greenValue h3 {
+    color: #2bb34b; }
+
+.dataValue {
+  font-size: 20pt;
+  font-weight: bold; }
 
 .show {
   position: relative;
-  height: 100px; }
+  height: 300px; }
 
 .show div {
   position: absolute;
@@ -309,3 +331,9 @@ body {
 
 form {
   padding-top: 20px; }
+
+.dataButtons img {
+  width: 25px;
+  position: relative;
+  top: 70px;
+  cursor: pointer; }

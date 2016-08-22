@@ -46,7 +46,7 @@ window.onload = function() {
   }
 
   function getZip(zip) {
-    console.log(zip)
+    console.log(zip);
     for (var i=0; i<dataZip.length;i++) {
       if (dataZip[i].zip === zip) {
         getData(dataZip[i].county)
@@ -74,7 +74,7 @@ window.onload = function() {
     $('#dataPoint1 p').html(air);
     $('#dataPoint2 p').html(water);
     $('#dataPoint3 p').html(housing);
-    $('#dataPoint4 p').html(drive);
+    $('#dataPoint4 p').html(drive + "%");
   }
 // END
 
@@ -83,37 +83,54 @@ window.onload = function() {
     var newZipValue = document.getElementById('zipValue').value;
     getZip(newZipValue);
   }
+  function newZipRed() {
+    var newZipValue = document.getElementById('zipValueRed').value;
+    getZip(newZipValue);
+  }
+  function newZipGreen() {
+    var newZipValue = document.getElementById('zipValueGreen').value;
+    getZip(newZipValue);
+  }
+  function newZipBlue() {
+    var newZipValue = document.getElementById('zipValueBlue').value;
+    getZip(newZipValue);
+  }
 
-  // $('#zipClick').click(function() {
-  //   newZip();
-  // })
   $('#yellowModal #zipClick').click(function() {
     newZip();
-    $('#yellowModal').modal('hide');
-    $('.bikeScene').hide();
-    $('.show #dataPoint1').addClass('selected');
-    $('.dataPoints').show();
+    setTimeout(function() {
+      $('#yellowModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.show #dataPoint1').addClass('selected');
+      $('.dataPoints').show();
+    },500);
   });
   $('#redModal #zipClick').click(function() {
-    newZip();
-    $('#redModal').modal('hide');
-    $('.bikeScene').hide();
-    $('.show #dataPoint3').addClass('selected');
-    $('.dataPoints').show();
+    newZipRed();
+    setTimeout(function() {
+      $('#redModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.show #dataPoint3').addClass('selected');
+      $('.dataPoints').show();
+    },500);
   });
   $('#greenModal #zipClick').click(function() {
-    newZip();
-    $('#greenModal').modal('hide');
-    $('.bikeScene').hide();
-    $('.show #dataPoint4').addClass('selected');
-    $('.dataPoints').show();
+    newZipGreen();
+    setTimeout(function() {
+      $('#greenModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.show #dataPoint4').addClass('selected');
+      $('.dataPoints').show();
+    },500);
   });
   $('#blueModal #zipClick').click(function() {
-    newZip();
-    $('#blueModal').modal('hide');
-    $('.bikeScene').hide();
-    $('.show #dataPoint2').addClass('selected');
-    $('.dataPoints').show();
+    newZipBlue();
+    setTimeout(function() {
+      $('#blueModal').modal('hide');
+      $('.bikeScene').hide();
+      $('.show #dataPoint2').addClass('selected');
+      $('.dataPoints').show();
+    },500);
   });
 
   $('#next').on('click', getNext);
