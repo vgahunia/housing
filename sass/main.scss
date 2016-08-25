@@ -112,13 +112,14 @@ body{
 }
 .bikeScene{
     display:none;
-    position: absolute;
+    position: relative;
     top:400px;
+    left:151px;
     img{
         width:90px;
     }
     .scene{
-        position: relative;
+        position: absolute;
     }
     #bike{
         width:150px;
@@ -132,22 +133,23 @@ body{
         opacity: 1;
     }
     #yellow{
-        top:-450px;
+        top:-330px;
         left:100px;
         opacity:0;
     }
     #blue{
-        left:50px;
+        left:130px;
+        top:150px;
         opacity:0;
     }
     #green{
-        left:60px;
-        top:-50px;
+        left:230px;
+        top:-60px;
         opacity:0;
     }
     #red{
-        top:-180px;
-        left:-245px;
+        top:-200px;
+        left:-15px;
         opacity:0;
     }
 }
@@ -207,9 +209,9 @@ body{
     margin-top: 80px;
     border-radius: 0;
 }
-.modal-backdrop {
-    background-color:white;
-}
+// .modal-backdrop {
+//     background-color:white;
+// }
 .buttonBay{
     margin: 0 auto;
     width:200px;
@@ -262,35 +264,72 @@ body{
 }
 .zipField{
     display: none;
+    margin-bottom: 30px;
+    input{
+        text-align: center;
+    }
 }
 /* ==============================================
 --------------------- DATA ----------------------
 ================================================ */
 .dataPoints{
 	display:none;
-    margin-top: 30px;
+    margin-top: 40px;
+    text-align: center;
     .dataIcon{
         width:70px;
         display:block;
         margin: 0 auto;
         margin-bottom: 10px;
     }
+    .topPerformer{
+        font-size: 7pt;
+        color:black;
+        margin-bottom: 10px;
+    }
     p, h3{
-        text-align: center;
-        width:192px;
         margin:0 auto;
     }
-    .yellowValue p, .yellowValue h3{
+    h3{
+        font-size: 14pt;
+        margin-bottom: 15px;
+    }
+    .yellowValue .dataValue, .yellowValue h3{
         color:rgb(255,201,10);
     }
-    .redValue p, .redValue h3{
+    .redValue .dataValue, .redValue h3{
         color:rgb(230,29,37);
     }
-    .blueValue p, .blueValue h3{
+    .blueValue .dataValue, .blueValue h3{
         color:rgb(26,144,208);
     }
-    .greenValue p, .greenValue h3{
+    .greenValue .dataValue, .greenValue h3{
         color:rgb(43,179,75);
+    }
+    .description{
+        font-size: 9.5pt;
+        margin-bottom: 10px;
+    }
+    button{
+        display: block;
+        margin:0 auto;
+        border:none;
+        border-radius: 5px;
+        color: white;
+        font-size: 6pt;
+        margin-top:10px;
+    }
+    .greenValue button{
+        background-color: rgb(43,179,75);
+    }
+    .yellowValue button{
+        background-color: rgb(255,201,10);
+    }
+    .blueValue button{
+        background-color: rgb(26,144,208);
+    }
+    .redValue button{
+        background-color: rgb(230,29,37);
     }
 }
 .dataValue{
@@ -304,6 +343,7 @@ body{
 .show div {
     position: absolute;
     display: none;
+    width:320px;
 }
 .show .selected {
     display: block;
@@ -311,9 +351,35 @@ body{
 form{
     padding-top: 20px;
 }
-.dataButtons img{
-    width: 25px;
-    position: relative;
-    top:70px;
-    cursor: pointer;
+.dataButtons {
+    img{
+        width: 25px;
+        position: relative;
+        top:170px;
+        cursor: pointer;
+    }
+    #next{
+        left:-40px;
+    }
+    #prev{
+        left:40px;
+    }
+}
+.breadCrumbs {
+    text-align: center;
+    display: inline;
+    margin: 0 auto;
+    padding-left: 0;
+}
+.crumb {
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  background-color: rgb(180,180,180);
+}
+.active {
+  background-color: rgb(80,80,80);
 }

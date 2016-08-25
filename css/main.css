@@ -95,12 +95,13 @@ body {
 ================================================ */
 .bikeScene {
   display: none;
-  position: absolute;
-  top: 400px; }
+  position: relative;
+  top: 400px;
+  left: 151px; }
   .bikeScene img {
     width: 90px; }
   .bikeScene .scene {
-    position: relative; }
+    position: absolute; }
   .bikeScene #bike {
     width: 150px;
     top: -30px;
@@ -111,19 +112,20 @@ body {
     left: 50px;
     opacity: 1; }
   .bikeScene #yellow {
-    top: -450px;
+    top: -330px;
     left: 100px;
     opacity: 0; }
   .bikeScene #blue {
-    left: 50px;
+    left: 130px;
+    top: 150px;
     opacity: 0; }
   .bikeScene #green {
-    left: 60px;
-    top: -50px;
+    left: 230px;
+    top: -60px;
     opacity: 0; }
   .bikeScene #red {
-    top: -180px;
-    left: -245px;
+    top: -200px;
+    left: -15px;
     opacity: 0; }
 
 .bounce {
@@ -244,9 +246,6 @@ body {
   margin-top: 80px;
   border-radius: 0; }
 
-.modal-backdrop {
-  background-color: white; }
-
 .buttonBay {
   margin: 0 auto;
   width: 200px;
@@ -288,31 +287,59 @@ body {
   margin-bottom: 0; }
 
 .zipField {
-  display: none; }
+  display: none;
+  margin-bottom: 30px; }
+  .zipField input {
+    text-align: center; }
 
 /* ==============================================
 --------------------- DATA ----------------------
 ================================================ */
 .dataPoints {
   display: none;
-  margin-top: 30px; }
+  margin-top: 40px;
+  text-align: center; }
   .dataPoints .dataIcon {
     width: 70px;
     display: block;
     margin: 0 auto;
     margin-bottom: 10px; }
+  .dataPoints .topPerformer {
+    font-size: 7pt;
+    color: black;
+    margin-bottom: 10px; }
   .dataPoints p, .dataPoints h3 {
-    text-align: center;
-    width: 192px;
     margin: 0 auto; }
-  .dataPoints .yellowValue p, .dataPoints .yellowValue h3 {
+  .dataPoints h3 {
+    font-size: 14pt;
+    margin-bottom: 15px; }
+  .dataPoints .yellowValue .dataValue, .dataPoints .yellowValue h3 {
     color: #ffc90a; }
-  .dataPoints .redValue p, .dataPoints .redValue h3 {
+  .dataPoints .redValue .dataValue, .dataPoints .redValue h3 {
     color: #e61d25; }
-  .dataPoints .blueValue p, .dataPoints .blueValue h3 {
+  .dataPoints .blueValue .dataValue, .dataPoints .blueValue h3 {
     color: #1a90d0; }
-  .dataPoints .greenValue p, .dataPoints .greenValue h3 {
+  .dataPoints .greenValue .dataValue, .dataPoints .greenValue h3 {
     color: #2bb34b; }
+  .dataPoints .description {
+    font-size: 9.5pt;
+    margin-bottom: 10px; }
+  .dataPoints button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 6pt;
+    margin-top: 10px; }
+  .dataPoints .greenValue button {
+    background-color: #2bb34b; }
+  .dataPoints .yellowValue button {
+    background-color: #ffc90a; }
+  .dataPoints .blueValue button {
+    background-color: #1a90d0; }
+  .dataPoints .redValue button {
+    background-color: #e61d25; }
 
 .dataValue {
   font-size: 20pt;
@@ -324,7 +351,8 @@ body {
 
 .show div {
   position: absolute;
-  display: none; }
+  display: none;
+  width: 320px; }
 
 .show .selected {
   display: block; }
@@ -335,5 +363,29 @@ form {
 .dataButtons img {
   width: 25px;
   position: relative;
-  top: 70px;
+  top: 170px;
   cursor: pointer; }
+
+.dataButtons #next {
+  left: -40px; }
+
+.dataButtons #prev {
+  left: 40px; }
+
+.breadCrumbs {
+  text-align: center;
+  display: inline;
+  margin: 0 auto;
+  padding-left: 0; }
+
+.crumb {
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  background-color: #b4b4b4; }
+
+.active {
+  background-color: #505050; }

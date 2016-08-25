@@ -33,7 +33,6 @@ $(document).ready(function(){
 });
 
 window.onload = function() {
-
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var data1 = JSON.stringify(housingData);
   var data = JSON.parse(data1);
@@ -71,10 +70,10 @@ window.onload = function() {
     }
   }
   function writeData(air, water, housing, drive) {
-    $('#dataPoint1 p').html(air);
-    $('#dataPoint2 p').html(water);
-    $('#dataPoint3 p').html(housing);
-    $('#dataPoint4 p').html(drive + "%");
+    $('#dataPoint1 .dataValue').html(air);
+    $('#dataPoint2 .dataValue').html(water);
+    $('#dataPoint3 .dataValue').html(housing);
+    $('#dataPoint4 .dataValue').html(drive + "%");
   }
 // END
 
@@ -96,40 +95,48 @@ window.onload = function() {
     getZip(newZipValue);
   }
 
-  $('#yellowModal #zipClick').click(function() {
+  $('#yellowModal #zipClick').click(function(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     newZip();
     setTimeout(function() {
       $('#yellowModal').modal('hide');
       $('.bikeScene').hide();
       $('.show #dataPoint1').addClass('selected');
       $('.dataPoints').show();
+      $('#map').css('opacity', '.5');
     },500);
   });
-  $('#redModal #zipClick').click(function() {
+  $('#redModal #zipClick').click(function(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     newZipRed();
     setTimeout(function() {
       $('#redModal').modal('hide');
       $('.bikeScene').hide();
       $('.show #dataPoint3').addClass('selected');
       $('.dataPoints').show();
+      $('#map').css('opacity', '.5');
     },500);
   });
-  $('#greenModal #zipClick').click(function() {
+  $('#greenModal #zipClick').click(function(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     newZipGreen();
     setTimeout(function() {
       $('#greenModal').modal('hide');
       $('.bikeScene').hide();
       $('.show #dataPoint4').addClass('selected');
       $('.dataPoints').show();
+      $('#map').css('opacity', '.5');
     },500);
   });
-  $('#blueModal #zipClick').click(function() {
+  $('#blueModal #zipClick').click(function(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     newZipBlue();
     setTimeout(function() {
       $('#blueModal').modal('hide');
       $('.bikeScene').hide();
       $('.show #dataPoint2').addClass('selected');
       $('.dataPoints').show();
+      $('#map').css('opacity', '.5');
     },500);
   });
 
@@ -194,7 +201,6 @@ window.onload = function() {
     setTimeout(function() {
       $('#red').css('opacity','1').addClass('bounce');
     }, 2400);
-    
   }
 }
 // END

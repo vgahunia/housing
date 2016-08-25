@@ -13,9 +13,9 @@
 
 
   <div class="col-sm-12">
-		<div class="col-sm-4"></div>
+		<div class="col-sm-3"></div>
 
-		<div class="col-sm-4" class="containerBike">
+		<div class="col-sm-6" class="containerBike">
 	<!-- Bike Scene -->
 			<div class="bikeScene">
 				<img id="bike" class="scene" src="img/bike.png">
@@ -31,25 +31,65 @@
 					<img src="img/buttonPrev.png" id="prev">
 				</div>
 				<div class="show col-md-8">
-					<div id="dataPoint1" class="yellowValue">
-						<img src="img/iconYellow.png" class="dataIcon">
-						<p class="dataValue"></p>
-						<h3>Air Pollution</h3>
-					</div>
-					<div id="dataPoint2" class="blueValue">
-						<img src="img/iconBlue.png" class="dataIcon">
-						<p class="dataValue"></p>
-						<h3>Water Violation</h3>
-					</div>
-					<div id="dataPoint3" class="redValue">
-						<img src="img/iconRed.png" class="dataIcon">
-						<p class="dataValue"></p>
-						<h3>Housing Problems</h3>
-					</div>
+
 					<div id="dataPoint4" class="greenValue">
 						<img src="img/iconGreen.png" class="dataIcon">
 						<p class="dataValue"></p>
-						<h3>Drive Alone</h3>
+						<p class="topPerformer">*Top US performers are below 71.3%.</p>
+						<h3>Drive alone to work</h3>
+						<p class="description">Percentage of the workforce<br> that drive alone to work</p>
+						<ul class="breadCrumbs">
+							<span class="crumb active"></span>
+							<span class="crumb"></span>
+							<span class="crumb"></span>
+							<span class="crumb"></span>
+						</ul>
+						<button>FULL COUNTY<br> HEALTH RANKINGS DATA</button>
+					</div>
+					
+					<div id="dataPoint3" class="redValue">
+						<img src="img/iconRed.png" class="dataIcon">
+						<p class="dataValue"></p>
+						<p class="topPerformer">*Top US performers are below 9.1.</p>
+						<h3>Severe housing problems</h3>
+						<p class="description">Percentage of households with at least 1 of 4<br> housing problems: overcrowding, high housing<br> costs, or lack of kitchen or plumbing facilities</p>
+						<ul class="breadCrumbs">
+							<span class="crumb"></span>
+							<span class="crumb active"></span>
+							<span class="crumb"></span>
+							<span class="crumb"></span>
+						</ul>
+						<button>FULL COUNTY<br> HEALTH RANKINGS DATA</button>
+					</div>
+
+					<div id="dataPoint2" class="blueValue">
+						<img src="img/iconBlue.png" class="dataIcon">
+						<p class="dataValue"></p>
+						<p class="topPerformer">*Top US performers are below 0.0%.</p>
+						<h3>Drinking water violation</h3>
+						<p class="description">Indicator of the presence of health-related<br> drinking water violations. Yes indicates the presence<br> of a violation. No indicates no violation.</p>
+						<ul class="breadCrumbs">
+							<span class="crumb"></span>
+							<span class="crumb"></span>
+							<span class="crumb active"></span>
+							<span class="crumb"></span>
+						</ul>
+						<button>FULL COUNTY<br> HEALTH RANKINGS DATA</button>
+					</div>
+
+					<div id="dataPoint1" class="yellowValue">
+						<img src="img/iconYellow.png" class="dataIcon">
+						<p class="dataValue"></p>
+						<p class="topPerformer">*Top US performers are below 9.5.</p>
+						<h3>Air Pollution -<br> particulate matter</h3>
+						<p class="description">Average daily density of fine particulate matter<br> in micrograms per cubic meter (PM2.5)</p>
+						<ul class="breadCrumbs">
+							<span class="crumb"></span>
+							<span class="crumb"></span>
+							<span class="crumb"></span>
+							<span class="crumb active"></span>
+						</ul>
+						<button>FULL COUNTY<br> HEALTH RANKINGS DATA</button>
 					</div>
 				</div>
 				<div class="dataButtons col-md-2">
@@ -65,7 +105,43 @@
 		<div class="modal-dialog" role="document">
 			<img src="img/banner.png" alt="" id="banner">
 			<div class="modal-content">
-				<div class="modal-body" ng-include="'includes/openModal.html'">
+				<div class="modal-body">
+					<div class="modalCopy">
+						<p>Where you live affects your health. Pick which most<br> resembles where you live and then use your mouse to ride a bike<br> through your area and see which factors impact health.</p>
+					</div>
+					<div class="mapLinks">
+						<div class="mapLink" id="city">
+							<img src="img/iconCity.png" alt="">
+							<h5>CITY</h5>
+						</div>
+						<div class="mapLink" id="suburb">
+							<img src="img/iconSuburb.png" alt="">
+							<h5>SUBURB</h5>
+						</div>
+						<div class="mapLink" id="rural">
+							<img src="img/iconRural.png" alt="">
+							<h5>RURAL</h5>
+						</div>
+					</div>
+
+					<div class="socialLinks">
+						<div class="social">
+							<img src="img/linkFacebook.png" alt="">
+						</div>
+						<div class="social">
+							<img src="img/linkTwitter.png" alt="">
+						</div>
+						<div class="social">
+							<img src="img/linkGoogle.png" alt="">
+						</div>
+						<div class="social">
+							<img src="img/linkLinkedIn.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn btn-secondary closeButton" data-dismiss="modal">Close</button> -->
+				</div>
 				</div>
 			</div>
 		</div>
@@ -77,7 +153,13 @@
 			<div class="modal-content border">
 				<div class="modal-body">
 					<img class="modalIcon" src="img/iconYellow.png">
-					<div class="zipField" ng-include="'includes/zip.html'"></div>
+					<div class="zipField">
+						<p>Enter your zipcode to search your area's<br> County Health Rankings</p>
+						<form>
+							<input type="text" placeholder="Enter Your Zip" id="zipValue"/>
+							<input type="submit" id="zipClick" style="display:none"/>
+						</form>
+					</div>
 					<div class="contentYellow">
 						<p>Poor quality, inadequate and unaffordable housing<br> contribute to infectious and chronic diseases, increased<br> injuries and poor childhood development.</p>
 						<div class="buttonBay">
@@ -98,6 +180,7 @@
 				<div class="modal-body">
 					<img class="modalIcon" src="img/iconRed.png">
 					<div class="zipField">
+						<p>Enter your zipcode to search your area's<br> County Health Rankings</p>
 						<form>
 							<input type="text" placeholder="zip" id="zipValueRed"/>
 							<input type="submit" id="zipClick" style="display:none"/>
@@ -123,6 +206,7 @@
 				<div class="modal-body">
 					<img class="modalIcon" src="img/iconGreen.png">
 					<div class="zipField">
+						<p>Enter your zipcode to search your area's<br> County Health Rankings</p>
 						<form>
 							<input type="text" placeholder="zip" id="zipValueGreen"/>
 							<input type="submit" id="zipClick" style="display:none"/>
@@ -148,6 +232,7 @@
 				<div class="modal-body">
 					<img class="modalIcon" src="img/iconBlue.png">
 					<div class="zipField">
+						<p>Enter your zipcode to search your area's<br> County Health Rankings</p>
 						<form>
 							<input type="text" placeholder="zip" id="zipValueBlue"/>
 							<input type="submit" id="zipClick" style="display:none"/>
@@ -168,14 +253,10 @@
 <!-- END Blue -->
 <!-- END ALL MODALS-->
 
-
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFQqre9L6qnIiGrpvkQMdMK-c6Z5D5HJU"
-  type="text/javascript"></script>
   <script type="text/javascript" src="js/data.js"></script>
   <script type="text/javascript" src="js/zip.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 
