@@ -152,6 +152,9 @@ body{
         left:-15px;
         opacity:0;
     }
+    #yellow,#red,#blue,#green{
+        cursor: pointer;
+    }
 }
 
 
@@ -382,4 +385,15 @@ form{
 }
 .active {
   background-color: rgb(80,80,80);
+}
+
+/* ==============================================
+--------------------- DATA ----------------------
+================================================ */
+
+
+@media (max-width: 768px) {
+  .facet_sidebar {
+    display: none;
+  }
 }

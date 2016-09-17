@@ -127,6 +127,8 @@ body {
     top: -200px;
     left: -15px;
     opacity: 0; }
+  .bikeScene #yellow, .bikeScene #red, .bikeScene #blue, .bikeScene #green {
+    cursor: pointer; }
 
 .bounce {
   -webkit-animation: bounce 1000ms linear both;
@@ -389,3 +391,10 @@ form {
 
 .active {
   background-color: #505050; }
+
+/* ==============================================
+--------------------- DATA ----------------------
+================================================ */
+@media (max-width: 768px) {
+  .facet_sidebar {
+    display: none; } }

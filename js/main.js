@@ -65,15 +65,16 @@ window.onload = function() {
         };
         var data3 = data[i].housingProblems;
         var data4 = data[i].driveAlone;
-        writeData(data1, data2, data3, data4);
+        var data5 = data[i].driveAloneLongCommute;
+        writeData(data1, data2, data3, data4, data5);
       }
     }
   }
-  function writeData(air, water, housing, drive) {
+  function writeData(air, water, housing, drive, driveLong) {
     $('#dataPoint1 .dataValue').html(air);
     $('#dataPoint2 .dataValue').html(water);
     $('#dataPoint3 .dataValue').html(housing);
-    $('#dataPoint4 .dataValue').html(drive + "%");
+    $('#dataPoint4 .dataValue').html(drive + "% / " + driveLong + "%");
   }
 // END
 
@@ -95,8 +96,10 @@ window.onload = function() {
     getZip(newZipValue);
   }
 
-  $('#yellowModal #zipClick').click(function(event) {
-    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+  $('#yellowModal #zipClick').click(function(e) {
+    e.preventDefault ? event.preventDefault() : (event.returnValue = false);
+    e.stopPropagation();
+    return false;
     newZip();
     setTimeout(function() {
       $('#yellowModal').modal('hide');
