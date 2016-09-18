@@ -32,6 +32,10 @@ $(document).ready(function(){
     })
 });
 
+$(window).load(function() {
+  $(".loader").fadeOut("slow");
+})
+
 window.onload = function() {
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var data1 = JSON.stringify(housingData);
