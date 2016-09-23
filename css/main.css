@@ -438,4 +438,38 @@ form {
     width: 360px;
     left: 30px; }
     #openModal .modal-dialog .modal-content {
-      width: 320px; } }
+      width: 320px; }
+  .mapBack #map {
+    top: -260px;
+    width: 2800px; }
+  .bikeScene {
+    top: 360px;
+    left: 0px; }
+    .bikeScene img {
+      width: 70px; }
+    .bikeScene .scene {
+      position: absolute; }
+    .bikeScene #bike {
+      width: 150px;
+      top: -30px;
+      left: -460px;
+      opacity: 0;
+      transition: all 1.2s ease-out; }
+    .bikeScene #bike.ride {
+      left: 50px;
+      top: -40px;
+      opacity: 1; }
+    .bikeScene #yellow {
+      top: -270px;
+      left: 100px; }
+    .bikeScene #blue {
+      left: 130px;
+      top: 150px; }
+    .bikeScene #green {
+      left: 220px;
+      top: -90px; }
+    .bikeScene #red {
+      top: -160px;
+      left: -15px; }
+  #map.city {
+    left: -2200px; } }

@@ -110,7 +110,7 @@ window.onload = function() {
       $('.bikeScene').hide();
       $('.show #dataPoint1').addClass('selected');
       $('.dataPoints').show();
-      $('#map').css('opacity', '.5');
+      $('#map').css('opacity', '.3');
     },500);
   });
   $('#redModal #zipClick').click(function(event) {
@@ -121,7 +121,7 @@ window.onload = function() {
       $('.bikeScene').hide();
       $('.show #dataPoint3').addClass('selected');
       $('.dataPoints').show();
-      $('#map').css('opacity', '.5');
+      $('#map').css('opacity', '.3');
     },500);
   });
   $('#greenModal #zipClick').click(function(event) {
@@ -132,7 +132,7 @@ window.onload = function() {
       $('.bikeScene').hide();
       $('.show #dataPoint4').addClass('selected');
       $('.dataPoints').show();
-      $('#map').css('opacity', '.5');
+      $('#map').css('opacity', '.3');
     },500);
   });
   $('#blueModal #zipClick').click(function(event) {
@@ -143,7 +143,7 @@ window.onload = function() {
       $('.bikeScene').hide();
       $('.show #dataPoint2').addClass('selected');
       $('.dataPoints').show();
-      $('#map').css('opacity', '.5');
+      $('#map').css('opacity', '.3');
     },500);
   });
 

@@ -448,4 +448,49 @@ form{
         }
     }
   }
+  .mapBack #map{
+    top:-260px;
+    width:2800px;
+  }
+  .bikeScene{
+    top:360px;
+    left:0px;
+    img{
+        width:70px;
+    }
+    .scene{
+        position: absolute;
+    }
+    #bike{
+        width:150px;
+        top:-30px;
+        left:-460px;
+        opacity:0;
+        transition: all 1.2s ease-out;
+    }
+    #bike.ride{
+        left:50px;
+        top:-40px;
+        opacity: 1;
+    }
+    #yellow{
+        top:-270px;
+        left:100px;
+    }
+    #blue{
+        left:130px;
+        top:150px;
+    }
+    #green{
+        left:220px;
+        top:-90px;
+    }
+    #red{
+        top:-160px;
+        left:-15px;
+    }
+  }
+  #map.city{
+    left:-2200px;
+  }
 }
