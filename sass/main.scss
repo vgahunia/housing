@@ -1,5 +1,6 @@
 body{
-    width: 1240px;
+    max-width: 1240px;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -289,8 +290,9 @@ body{
 ================================================ */
 .dataPoints{
 	display:none;
-    margin-top: 40px;
+    margin: 40px auto;
     text-align: center;
+    max-width:400px;
     .dataIcon{
         width:70px;
         display:block;
@@ -356,8 +358,9 @@ body{
     height: 300px;
 }
 .show div {
-    position: absolute;
+    // position: absolute;
     display: none;
+    margin: 0 auto;
     width:320px;
 }
 .show .selected {
@@ -367,17 +370,19 @@ form{
     padding-top: 20px;
 }
 .dataButtons {
+    position: relative;
     img{
         width: 25px;
-        position: relative;
+        position: absolute;
         top:170px;
         cursor: pointer;
+        z-index: 3;
     }
     #next{
-        left:-40px;
+        left:355px;
     }
     #prev{
-        left:40px;
+        left:20px;
     }
 }
 .breadCrumbs {
@@ -400,7 +405,7 @@ form{
 }
 
 /* ==============================================
---------------------- DATA ----------------------
+-------------- MEDIA QUERIES --------------------
 ================================================ */
 
 
@@ -454,7 +459,7 @@ form{
   }
   .bikeScene{
     top:360px;
-    left:0px;
+    left:50px;
     img{
         width:70px;
     }
@@ -462,15 +467,15 @@ form{
         position: absolute;
     }
     #bike{
-        width:150px;
-        top:-30px;
+        width:120px;
+        top:15px;
         left:-460px;
         opacity:0;
         transition: all 1.2s ease-out;
     }
     #bike.ride{
-        left:50px;
-        top:-40px;
+        left:60px;
+        top:15px;
         opacity: 1;
     }
     #yellow{
@@ -493,4 +498,12 @@ form{
   #map.city{
     left:-2200px;
   }
+  .dataButtons {
+    #next{
+        left:340px;
+    }
+    #prev{
+        left:5px;
+    }
+}
 }

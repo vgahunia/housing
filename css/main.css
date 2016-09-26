@@ -1,5 +1,6 @@
 body {
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto; }
 
@@ -310,8 +311,9 @@ body {
 ================================================ */
 .dataPoints {
   display: none;
-  margin-top: 40px;
-  text-align: center; }
+  margin: 40px auto;
+  text-align: center;
+  max-width: 400px; }
   .dataPoints .dataIcon {
     width: 70px;
     display: block;
@@ -363,8 +365,8 @@ body {
   height: 300px; }
 
 .show div {
-  position: absolute;
   display: none;
+  margin: 0 auto;
   width: 320px; }
 
 .show .selected {
@@ -373,17 +375,18 @@ body {
 form {
   padding-top: 20px; }
 
-.dataButtons img {
-  width: 25px;
-  position: relative;
-  top: 170px;
-  cursor: pointer; }
-
-.dataButtons #next {
-  left: -40px; }
-
-.dataButtons #prev {
-  left: 40px; }
+.dataButtons {
+  position: relative; }
+  .dataButtons img {
+    width: 25px;
+    position: absolute;
+    top: 170px;
+    cursor: pointer;
+    z-index: 3; }
+  .dataButtons #next {
+    left: 355px; }
+  .dataButtons #prev {
+    left: 20px; }
 
 .breadCrumbs {
   text-align: center;
@@ -404,7 +407,7 @@ form {
   background-color: #505050; }
 
 /* ==============================================
---------------------- DATA ----------------------
+-------------- MEDIA QUERIES --------------------
 ================================================ */
 @media only screen and (max-width: 768px) {
   .mapBack {
@@ -444,20 +447,20 @@ form {
     width: 2800px; }
   .bikeScene {
     top: 360px;
-    left: 0px; }
+    left: 50px; }
     .bikeScene img {
       width: 70px; }
     .bikeScene .scene {
       position: absolute; }
     .bikeScene #bike {
-      width: 150px;
-      top: -30px;
+      width: 120px;
+      top: 15px;
       left: -460px;
       opacity: 0;
       transition: all 1.2s ease-out; }
     .bikeScene #bike.ride {
-      left: 50px;
-      top: -40px;
+      left: 60px;
+      top: 15px;
       opacity: 1; }
     .bikeScene #yellow {
       top: -270px;
@@ -472,4 +475,8 @@ form {
       top: -160px;
       left: -15px; }
   #map.city {
-    left: -2200px; } }
+    left: -2200px; }
+  .dataButtons #next {
+    left: 340px; }
+  .dataButtons #prev {
+    left: 5px; } }
