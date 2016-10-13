@@ -1,4 +1,17 @@
 $(document).ready(function(){
+
+    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+    var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+    if ((is_chrome)&&(is_safari)) {is_safari=false;}
+    if ((is_chrome)&&(is_opera)) {is_chrome=false;}
+    if (is_safari) {
+      $('form input[type=submit]').css('display','inline-block');
+    }
+
+
     $('#openModal').modal('show');
 
     $('#yellow').click(function() {
@@ -77,7 +90,7 @@ window.onload = function() {
   function writeData(air, water, housing, drive, driveLong) {
     $('#dataPoint1 .dataValue').html(air);
     $('#dataPoint2 .dataValue').html(water);
-    $('#dataPoint3 .dataValue').html(housing);
+    $('#dataPoint3 .dataValue').html(housing + "%");
     $('#dataPoint4 .dataValue').html(drive + "% / " + driveLong + "%");
   }
 // END
@@ -102,8 +115,6 @@ window.onload = function() {
 
   $('#yellowModal #zipClick').click(function(e) {
     e.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    e.stopPropagation();
-    return false;
     newZip();
     setTimeout(function() {
       $('#yellowModal').modal('hide');

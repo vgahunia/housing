@@ -378,7 +378,7 @@ form {
 .dataButtons {
   position: relative; }
   .dataButtons img {
-    width: 25px;
+    width: 27px;
     position: absolute;
     top: 170px;
     cursor: pointer;
@@ -409,9 +409,20 @@ form {
 /* ==============================================
 -------------- MEDIA QUERIES --------------------
 ================================================ */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .mapBack {
-    overflow: visible; }
+    overflow: visible; } }
+
+@media only screen and (max-width: 1080px) {
+  .bikeScene {
+    top: 400px;
+    left: 50px; }
+    .bikeScene #bike.ride {
+      left: 60px;
+      top: -30px;
+      opacity: 1; } }
+
+@media only screen and (max-width: 768px) {
   #banner {
     width: 122.5%;
     position: relative;
