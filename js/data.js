@@ -1,3 +1,4 @@
+
 var housingData = [
 {"fips":01001,"state":"Alabama","county":"Autauga","airPollution":12.9,"waterViolation":"No","housingProblems":14,"driveAlone":89,"driveAloneLongCommute":42},
 {"fips":01003,"state":"Alabama","county":"Baldwin","airPollution":13.1,"waterViolation":"Yes","housingProblems":15,"driveAlone":84,"driveAloneLongCommute":37},
