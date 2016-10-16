@@ -407,7 +407,11 @@ form{
 /* ==============================================
 -------------- WHAT WORKS MODAL -----------------
 ================================================ */
-
+#whatWorksModal .iconModal{
+    max-width: 540px;
+    max-height:610px;
+    // overflow-y: scroll;
+}
 #whatWorksBody{
     margin-bottom: 20px;
     h1{
@@ -419,10 +423,56 @@ form{
     h6{
         margin-top: 0;
     }
+    div{
+        text-align: left;
+        margin-right: 30px;
+        margin-left: 30px;
+        h3{
+            font-size: 15px;
+        }
+        span{
+            font-size: 11px;
+        }
+    }
 }
 .wwRed{
     h1{
         color: rgb(230,29,37);
+    }
+    .colorData{
+        h3{
+            color: rgb(230,29,37);
+        }
+    }
+}
+.wwYellow{
+    h1{
+        color: rgb(255,201,10);
+    }
+    .colorData{
+        h3{
+            color: rgb(255,201,10);
+        }
+    }
+}
+.wwGreen{
+    h1{
+        color: rgb(43,179,75);
+    }
+    .colorData{
+        h3{
+            color: rgb(43,179,75);
+        }
+    }
+}
+.wwBlue{
+    h1{
+        color: rgb(26,144,208);
+    }
+    .colorData{
+        h3{
+            color: rgb(26,144,208);
+        }
     }
 }
 

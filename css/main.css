@@ -409,6 +409,10 @@ form {
 /* ==============================================
 -------------- WHAT WORKS MODAL -----------------
 ================================================ */
+#whatWorksModal .iconModal {
+  max-width: 540px;
+  max-height: 610px; }
+
 #whatWorksBody {
   margin-bottom: 20px; }
   #whatWorksBody h1 {
@@ -418,9 +422,38 @@ form {
     margin-bottom: 4px; }
   #whatWorksBody h6 {
     margin-top: 0; }
+  #whatWorksBody div {
+    text-align: left;
+    margin-right: 30px;
+    margin-left: 30px; }
+    #whatWorksBody div h3 {
+      font-size: 15px; }
+    #whatWorksBody div span {
+      font-size: 11px; }
 
 .wwRed h1 {
   color: #e61d25; }
+
+.wwRed .colorData h3 {
+  color: #e61d25; }
+
+.wwYellow h1 {
+  color: #ffc90a; }
+
+.wwYellow .colorData h3 {
+  color: #ffc90a; }
+
+.wwGreen h1 {
+  color: #2bb34b; }
+
+.wwGreen .colorData h3 {
+  color: #2bb34b; }
+
+.wwBlue h1 {
+  color: #1a90d0; }
+
+.wwBlue .colorData h3 {
+  color: #1a90d0; }
 
 /* ==============================================
 -------------- MEDIA QUERIES --------------------

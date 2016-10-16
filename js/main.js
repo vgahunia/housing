@@ -3,8 +3,6 @@ var colorPick;
 var housingPick;
 
 $(document).ready(function(){
-
-
     var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
     var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
     var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
@@ -61,50 +59,113 @@ $(document).ready(function(){
 
     function getColorData() {
       var colorDataPull, colorData;
-      if (colorPick=="red") {
-        colorDataPull = JSON.stringify(redData);
+      function setUp(data) {
+        colorDataPull = JSON.stringify(data);
         colorData = JSON.parse(colorDataPull);
-        $('#whatWorksBody').addClass('wwRed');
+        var lastClass = $('#whatWorksBody').attr('class').split(' ').pop();
+        $('#whatWorksBody').removeClass(lastClass);
+      }
+      if (colorPick=="red") {
+        setUp(redData);
+        $('#whatWorksBody').addClass('wwRed');  
         $('#whatWorksIcon').attr("src","img/iconRed.png");
       }
       else if (colorPick=="yellow") {
-        colorDataPull = JSON.stringify(yellowData);
-        colorData = JSON.parse(colorDataPull);
+        setUp(yellowData);
+        $('#whatWorksBody').addClass('wwYellow'); 
         $('#whatWorksIcon').attr("src","img/iconYellow.png");
       }
       else if (colorPick=="blue") {
-        colorDataPull = JSON.stringify(blueData);
-        colorData = JSON.parse(colorDataPull);
+        setUp(blueData);
+        $('#whatWorksBody').addClass('wwBlue'); 
         $('#whatWorksIcon').attr("src","img/iconBlue.png");
       }
       else if (colorPick=="green") {
-        colorDataPull = JSON.stringify(greenData);
-        colorData = JSON.parse(colorDataPull);
+        setUp(greenData);
+        $('#whatWorksBody').addClass('wwGreen'); 
         $('#whatWorksIcon').attr("src","img/iconGreen.png");
       }
-      var colorArray= colorData;
-      return colorArray;
+      return colorData;
     }
     function placeColorData(array) {
       $('.colorData').empty();
       $('.colorData').append(housingPick + "<br>");
       for (var i=0;i<array.length;i++) {
         if (housingPick==array[i].housingPick) {
-          var hf, approach;
-          hf = array[i].healthFactor;
-          approach = array[i].approach;
-
-          $('.colorData').append(hf + ", " + approach+"<br>");
+          var hf = array[i].healthFactor;
+          var approach = array[i].approach;
+          var title=array[i].title;
+          var description=array[i].description;
+          var rating=array[i].rating;
+          var url=array[i].url;
+          $('.colorData').append(
+            "<h3>" + title + 
+            "<span> (" + rating +")</span></h3><br>" +
+            description + "<hr>"
+            );
         }
       }
     }
     function getWhatWorks() {
       var dataArray = getColorData();
-      console.log(dataArray[0].approach);
       placeColorData(dataArray);
     }
 
   var yellowData = [
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
+  },
   {
     "healthFactor":"Air & Water Quality",
     "approach":"Increase water conservation & preservation",
@@ -161,6 +222,60 @@ var redData = [
     "rating":"Scientifically Supported",
     "url":"none",
     "housingPick":"rural"
+  },
+    {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
+  },
+    {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
   }
 ];
 
@@ -191,10 +306,91 @@ var greenData = [
     "rating":"Scientifically Supported",
     "url":"none",
     "housingPick":"rural"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
   }
 ];
 
 var blueData = [
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"city"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"suburb"
+  },
+  {
+    "healthFactor":"Air & Water Quality",
+    "approach":"Increase water conservation & preservation",
+    "title":"Permeable pavement projects",
+    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
+    "rating":"Scientifically Supported",
+    "url":"none",
+    "housingPick":"rural"
+  },
   {
     "healthFactor":"Air & Water Quality",
     "approach":"Increase water conservation & preservation",
