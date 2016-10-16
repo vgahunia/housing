@@ -64,6 +64,7 @@ $(document).ready(function(){
       if (colorPick=="red") {
         colorDataPull = JSON.stringify(redData);
         colorData = JSON.parse(colorDataPull);
+        $('#whatWorksBody').addClass('wwRed');
         $('#whatWorksIcon').attr("src","img/iconRed.png");
       }
       else if (colorPick=="yellow") {
@@ -85,13 +86,14 @@ $(document).ready(function(){
       return colorArray;
     }
     function placeColorData(array) {
+      $('.colorData').empty();
       $('.colorData').append(housingPick + "<br>");
       for (var i=0;i<array.length;i++) {
         if (housingPick==array[i].housingPick) {
           var hf, approach;
           hf = array[i].healthFactor;
           approach = array[i].approach;
-          console.log(approach);
+
           $('.colorData').append(hf + ", " + approach+"<br>");
         }
       }

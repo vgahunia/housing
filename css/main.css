@@ -407,6 +407,22 @@ form {
   background-color: #505050; }
 
 /* ==============================================
+-------------- WHAT WORKS MODAL -----------------
+================================================ */
+#whatWorksBody {
+  margin-bottom: 20px; }
+  #whatWorksBody h1 {
+    margin-top: -40px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 4px; }
+  #whatWorksBody h6 {
+    margin-top: 0; }
+
+.wwRed h1 {
+  color: #e61d25; }
+
+/* ==============================================
 -------------- MEDIA QUERIES --------------------
 ================================================ */
 @media only screen and (max-width: 1280px) {
