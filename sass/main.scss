@@ -409,8 +409,6 @@ form{
 ================================================ */
 #whatWorksModal .iconModal{
     max-width: 540px;
-    max-height:610px;
-    // overflow-y: scroll;
 }
 #whatWorksBody{
     margin-bottom: 20px;
@@ -427,11 +425,15 @@ form{
         text-align: left;
         margin-right: 30px;
         margin-left: 30px;
-        h3{
-            font-size: 15px;
-        }
-        span{
-            font-size: 11px;
+        max-height:400px;
+        overflow-y:scroll;
+        h3{font-size: 15px;}
+        h5{ font-size:13px;}
+        span{font-size: 11px;}
+        p{
+            margin-top:5px; 
+            margin-bottom:0;
+            font-size: 12px;
         }
     }
 }

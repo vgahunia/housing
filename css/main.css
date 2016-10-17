@@ -410,8 +410,7 @@ form {
 -------------- WHAT WORKS MODAL -----------------
 ================================================ */
 #whatWorksModal .iconModal {
-  max-width: 540px;
-  max-height: 610px; }
+  max-width: 540px; }
 
 #whatWorksBody {
   margin-bottom: 20px; }
@@ -425,11 +424,19 @@ form {
   #whatWorksBody div {
     text-align: left;
     margin-right: 30px;
-    margin-left: 30px; }
+    margin-left: 30px;
+    max-height: 400px;
+    overflow-y: scroll; }
     #whatWorksBody div h3 {
       font-size: 15px; }
+    #whatWorksBody div h5 {
+      font-size: 13px; }
     #whatWorksBody div span {
       font-size: 11px; }
+    #whatWorksBody div p {
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 12px; }
 
 .wwRed h1 {
   color: #e61d25; }

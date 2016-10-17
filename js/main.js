@@ -100,8 +100,10 @@ $(document).ready(function(){
           var url=array[i].url;
           $('.colorData').append(
             "<h3>" + title + 
-            "<span> (" + rating +")</span></h3><br>" +
-            description + "<hr>"
+            "<span> (" + rating +")</span></h3>" +
+            "<h5>" + description + "</h5>" +
+            "<p>" + hf + "</p>" +
+            "<hr>"
             );
         }
       }
@@ -124,9 +126,9 @@ $(document).ready(function(){
   {
     "healthFactor":"Air & Water Quality",
     "approach":"Increase water conservation & preservation",
-    "title":"Permeable pavement projects",
-    "description":"Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
-    "rating":"Scientifically Supported",
+    "title":"Proper drug disposal programs",
+    "description":"Establish programs that accept expired, unwanted, or unused medicines from designated users and dispose of them responsibly",
+    "rating":"Expert Opinion",
     "url":"none",
     "housingPick":"suburb"
   },
