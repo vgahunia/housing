@@ -530,6 +530,9 @@ form{
   }
 }
 @media only screen and (max-width: 470px) {
+    .show div{
+        width:auto;
+    }
   #banner{
     width:109%;
     left:-37px;
@@ -596,5 +599,45 @@ form{
     #prev{
         left:5px;
     }
+  }
 }
+@media only screen and (max-width: 380px) {
+    #openModal .modal-dialog .modal-content {
+        width: 275px;
+    }
+    #openModal .modal-body .mapLinks .mapLink {
+        width: 80px;
+    }
+    #openModal .modal-body .mapLinks {
+        width: 260px;
+    }
+    .modal-dialog {
+        margin: 0px;
+    }
+    #banner {
+        width: 95%;
+        left: -34px;
+    }
+    .mapBack {
+        top: -100px;
+    }
+    .bikeScene {
+        top: 250px;
+    }
+    .bikeScene #green {
+        left: 177px;
+        top: -8px;
+    }
+    .bikeScene #blue {
+        left: 84px;
+        top: 148px;
+    }
+    .bikeScene #yellow {
+        top: -179px;
+        left: 81px;
+    }
+    .bikeScene #red {
+        top: -84px;
+        left: -15px;
+    }
 }
