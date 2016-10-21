@@ -309,6 +309,10 @@ body {
 /* ==============================================
 --------------------- DATA ----------------------
 ================================================ */
+#slideShow {
+  max-width: 400px;
+  margin: 0 auto; }
+
 .dataPoints {
   display: none;
   margin: 40px auto;
@@ -379,14 +383,8 @@ form {
   position: relative; }
   .dataButtons img {
     width: 27px;
-    position: absolute;
-    top: 170px;
     cursor: pointer;
     z-index: 3; }
-  .dataButtons #next {
-    left: 355px; }
-  .dataButtons #prev {
-    left: 20px; }
 
 .breadCrumbs {
   text-align: center;
