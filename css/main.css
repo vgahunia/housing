@@ -2,7 +2,8 @@ body {
   max-width: 1240px;
   width: 100%;
   overflow: hidden;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif; }
 
 .loader {
   position: fixed;
@@ -71,6 +72,9 @@ body {
     text-align: center;
     padding-left: 30px;
     padding-right: 30px; }
+    #openModal .modal-body .modalCopy h5 {
+      font-size: 14.5px;
+      font-weight: bold; }
   #openModal .modal-body .mapLinks {
     width: 310px;
     margin: 0 auto; }
@@ -272,6 +276,11 @@ body {
     border: none;
     border-radius: 5px;
     margin-bottom: 5px; }
+  .buttonBay button a {
+    display: block;
+    padding: 4px;
+    color: white;
+    text-decoration: none; }
 
 .border {
   border-radius: 0;
@@ -485,19 +494,23 @@ form {
       top: -30px;
       opacity: 1; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 864px) {
+  .mapBack #map {
+    top: 0px; }
+  .mapBack #map.rural, .mapBack #map.city, .mapBack #map.suburb {
+    top: -650px; }
   #banner {
     width: 122.5%;
-    position: relative;
     top: 20px;
-    left: -40px;
-    z-index: 3; }
+    left: -40px; }
+  .bikeScene {
+    left: 22px; }
   #openModal {
     width: 440px;
     margin: 0 auto; }
     #openModal .modal-dialog {
       width: 360px;
-      left: 30px; }
+      left: 0px; }
     #openModal .modal-body {
       width: 100%;
       padding-top: 0; }
@@ -514,15 +527,15 @@ form {
     left: -37px;
     z-index: 3; }
   #openModal .modal-dialog {
-    width: 360px;
-    left: 30px; }
+    width: 350px;
+    left: 29px; }
     #openModal .modal-dialog .modal-content {
       width: 320px; }
   .mapBack #map {
-    top: -260px;
+    top: -335px !important;
     width: 2800px; }
   .bikeScene {
-    top: 360px;
+    top: 276px;
     left: 50px; }
     .bikeScene img {
       width: 110px; }
@@ -539,16 +552,16 @@ form {
       top: 15px;
       opacity: 1; }
     .bikeScene #yellow {
-      top: -270px;
-      left: 100px; }
+      top: -195px;
+      left: 91px; }
     .bikeScene #blue {
-      left: 130px;
-      top: 150px; }
+      left: 66px;
+      top: 155px; }
     .bikeScene #green {
-      left: 220px;
-      top: -90px; }
+      left: 198px;
+      top: 4px; }
     .bikeScene #red {
-      top: -160px;
+      top: -97px;
       left: -15px; }
   #map.city {
     left: -2200px; }
@@ -558,6 +571,10 @@ form {
     left: 5px; } }
 
 @media only screen and (max-width: 380px) {
+  #greenModal .modal-dialog, #blueModal .modal-dialog, #yellowModal .modal-dialog, #redModal .modal-dialog {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px; }
   #openModal .modal-dialog .modal-content {
     width: 275px; }
   #openModal .modal-body .mapLinks .mapLink {
@@ -567,12 +584,13 @@ form {
   .modal-dialog {
     margin: 0px; }
   #banner {
-    width: 95%;
-    left: -34px; }
-  .mapBack {
-    top: -100px; }
+    width: 96%;
+    left: -30px; }
+  .mapBack #map {
+    top: -391px !important; }
   .bikeScene {
-    top: 250px; }
+    top: 221px;
+    left: 19px; }
   .bikeScene #green {
     left: 177px;
     top: -8px; }
@@ -584,4 +602,10 @@ form {
     left: 81px; }
   .bikeScene #red {
     top: -84px;
-    left: -15px; } }
+    left: -15px; }
+  #whatWorksModal .iconModal {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px; }
+  #whatWorksBody div {
+    max-height: 300px; } }
