@@ -139,19 +139,19 @@ window.onload = function() {
 
   // links to different parts of map
 
-  $('#city img').click(function() {
+  $('#city').click(function() {
     housingPick = 'city';
     $('#map').removeClass().addClass('city');
     $('#openModal').modal('hide');
     bikeScene();
   });
-  $('#suburb img').click(function() {
+  $('#suburb').click(function() {
     housingPick = 'suburb';
     $('#map').removeClass().addClass('suburb');
     $('#openModal').modal('hide');
     bikeScene();
   });
-  $('#rural img').click(function() {
+  $('#rural').click(function() {
     housingPick = 'rural';
     $('#map').removeClass().addClass('rural');
     $('#openModal').modal('hide');
@@ -168,12 +168,15 @@ window.onload = function() {
     }, 1200);
     setTimeout(function() {
       $('#blue').css('opacity','1').addClass('bounce');
-    }, 1600);
+    }, 2400);
     setTimeout(function() {
       $('#green').css('opacity','1').addClass('bounce');
     }, 2000);
     setTimeout(function() {
       $('#red').css('opacity','1').addClass('bounce');
-    }, 2400);
+    }, 1600);
+    setTimeout(function(){
+        $('.scene').removeClass().addClass('pulse');
+    }, 5500)
   }
 }
