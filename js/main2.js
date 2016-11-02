@@ -160,6 +160,7 @@ window.onload = function() {
 
   function bikeScene() {
     $('.bikeScene').show();
+    $('.nav').show();
     setTimeout(function() {
       $('#bike').addClass('ride');
     }, 300);
