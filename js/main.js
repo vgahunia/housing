@@ -13,9 +13,29 @@ $(document).ready(function(){
     if (is_safari) {
       $('form input[type=submit]').css('display','inline-block');
     }
+    if (is_firefox) {
+      $('.bikeScene #yellow').css('animation-delay','initial');
+      $('.bikeScene #red').css('animation-delay','initial');
+      $('.bikeScene #green').css('animation-delay','initial');
+      $('.bikeScene #blue').css('animation-delay','initial');
+    }
 
     $('#openModal').modal('show');
-// COLORED ICONS TO OPEN MODAL
+// REFRESH WINDOW and BACK BUTTON
+    $('#smallBanner').click(function() {
+      window.location.reload();
+    })
+
+    $('#backButton').click(function() {
+      var abc = $('.dataPoints').css('display');
+      if (abc == 'block') {
+        $('.show div').removeClass('selected');
+        $('.dataPoints').hide();
+        $('.bikeScene').show();
+        $('#map').css('opacity', '1');
+      } else window.location.reload();
+    })
+// COLORED ICONS TO OPEN SELECTED MODAL
     $('#yellow').click(function() {
       colorPick='yellow';
       $('#yellowModal').modal('show');
