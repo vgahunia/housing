@@ -3,6 +3,9 @@ var colorPick;
 var housingPick;
 
 $(document).ready(function(){
+    $('#openModal').modal('show');
+
+  //BROWSER SPECIFIC ISSUES
     var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
     var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
     var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
@@ -19,8 +22,7 @@ $(document).ready(function(){
       $('.bikeScene #green').css('animation-delay','initial');
       $('.bikeScene #blue').css('animation-delay','initial');
     }
-
-    $('#openModal').modal('show');
+// END BROWSER
 // REFRESH WINDOW and BACK BUTTON
     $('#smallBanner').click(function() {
       window.location.reload();
@@ -33,6 +35,8 @@ $(document).ready(function(){
         $('.dataPoints').hide();
         $('.bikeScene').show();
         $('#map').css('opacity', '1');
+        $('.contentMain').show();
+        $('.zipField').hide();
       } else window.location.reload();
     })
 // COLORED ICONS TO OPEN SELECTED MODAL
@@ -54,19 +58,19 @@ $(document).ready(function(){
     })
 // BUTTON For HOUSING DATA
     $('#yellowModal .dataButton').click(function() {
-      $('.contentYellow').hide();
+      $('#yellowModal .contentMain').hide();
       $('#yellowModal .zipField').show();
     })
     $('#redModal .dataButton').click(function() {
-      $('.contentRed').hide();
+      $('#redModal .contentMain').hide();
       $('#redModal .zipField').show();
     })
     $('#greenModal .dataButton').click(function() {
-      $('.contentGreen').hide();
+      $('#greenModal .contentMain').hide();
       $('#greenModal .zipField').show();
     })
     $('#blueModal .dataButton').click(function() {
-      $('.contentBlue').hide();
+      $('#blueModal .contentMain').hide();
       $('#blueModal .zipField').show();
     })
 
@@ -140,6 +144,9 @@ $(document).ready(function(){
       placeColorData(dataArray);
     }
 
+//--------------------------------------
+//----- DATA ARRAY OF OBJECTS ----------
+//--------------------------------------
   var yellowData = [
   {
     "healthFactor":"Air & Water Quality • Employment",
