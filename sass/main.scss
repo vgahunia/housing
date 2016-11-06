@@ -409,6 +409,10 @@ form{
   margin-right: 5px;
   background-color: rgb(180,180,180);
 }
+.description{
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .active {
   background-color: rgb(80,80,80);
 }
@@ -565,6 +569,9 @@ form{
     left:-37px;
     z-index: 3;
   }
+    #smallBanner{
+        display:none;
+    }
   #openModal{
     .modal-dialog{
         width:350px;

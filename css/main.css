@@ -328,6 +328,10 @@ form {
   margin-right: 5px;
   background-color: #b4b4b4; }
 
+.description {
+  padding-right: 15px;
+  padding-left: 15px; }
+
 .active {
   background-color: #505050; }
 
@@ -444,6 +448,8 @@ form {
     width: 109%;
     left: -37px;
     z-index: 3; }
+  #smallBanner {
+    display: none; }
   #openModal .modal-dialog {
     width: 350px;
     left: 29px; }
