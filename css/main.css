@@ -222,9 +222,16 @@ body {
 
 .zipField {
   display: none;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
   .zipField input {
     text-align: center; }
+  .zipField .warning {
+    color: red;
+    text-align: center;
+    height: 22px;
+    padding: 10px;
+    font-size: 13px; }
 
 /* ==============================================
 --------------------- DATA ----------------------

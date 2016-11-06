@@ -287,8 +287,16 @@ body{
 .zipField{
     display: none;
     margin-bottom: 30px;
+    position: relative;
     input{
         text-align: center;
+    }
+    .warning{
+        color: red;
+        text-align: center;
+        height: 22px;
+        padding: 10px;
+        font-size: 13px;
     }
 }
 /* ==============================================

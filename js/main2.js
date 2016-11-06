@@ -1,7 +1,7 @@
 $(window).load(function() {
   $(".loader").fadeOut("slow");
 })
-
+var tester=false;
 window.onload = function() {
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var dataJson1 = JSON.stringify(housingData);
@@ -15,10 +15,10 @@ window.onload = function() {
   }
 
   function getZip(zip) {
-    console.log(zip);
     for (var i=0; i<dataZip.length;i++) {
       if (dataZip[i].zip === zip) {
         getData(dataZip[i].county)
+        tester=true;
       }
     }
   }
@@ -36,7 +36,10 @@ window.onload = function() {
         var data3 = data[i].housingProblems;
         var data4 = data[i].driveAlone;
         var data5 = data[i].driveAloneLongCommute;
+        var county = data[i].county;
+        var state = data[i].state;
         writeData(data1, data2, data3, data4, data5);
+        console.log(county + " County" + ", " + state);
       }
     }
   }
@@ -52,63 +55,95 @@ window.onload = function() {
   function newZip() {
     var newZipValue = document.getElementById('zipValue').value;
     getZip(newZipValue);
+    return newZipValue;
   }
   function newZipRed() {
     var newZipValue = document.getElementById('zipValueRed').value;
     getZip(newZipValue);
+    return newZipValue;
   }
   function newZipGreen() {
     var newZipValue = document.getElementById('zipValueGreen').value;
     getZip(newZipValue);
+    return newZipValue;
   }
   function newZipBlue() {
     var newZipValue = document.getElementById('zipValueBlue').value;
     getZip(newZipValue);
+    return newZipValue;
   }
 
   $('#yellowModal #zipClick').click(function(e) {
     e.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    newZip();
-    setTimeout(function() {
-      $('#yellowModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.show #dataPoint1').addClass('selected');
-      $('.dataPoints').show();
-      $('#map').css('opacity', '.3');
-    },500);
+    var x = newZip();
+    console.log(x +"first")
+    if (x == '' || tester==false) {
+      $('.warning').html('Please enter a valid zip code');
+    } else {
+      setTimeout(function() {
+        $('#yellowModal').modal('hide');
+        $('.bikeScene').hide();
+        $('.show #dataPoint1').addClass('selected');
+        $('.dataPoints').show();
+        $('#map').css('opacity', '.3');
+        $('.warning').html('');
+        tester=false;
+      },500);
+    }
   });
   $('#redModal #zipClick').click(function(event) {
     event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    newZipRed();
-    setTimeout(function() {
-      $('#redModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.show #dataPoint3').addClass('selected');
-      $('.dataPoints').show();
-      $('#map').css('opacity', '.3');
-    },500);
+    var x1 = newZipRed();
+    console.log(x1 +"first")
+    if (x1 == '' || tester==false) {
+      $('.warning').html('Please enter a valid zip code');
+    } else {
+      setTimeout(function() {
+        $('#redModal').modal('hide');
+        $('.bikeScene').hide();
+        $('.show #dataPoint3').addClass('selected');
+        $('.dataPoints').show();
+        $('#map').css('opacity', '.3');
+        $('.warning').html('');
+        tester=false;
+      },500);
+    }
   });
   $('#greenModal #zipClick').click(function(event) {
     event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    newZipGreen();
-    setTimeout(function() {
-      $('#greenModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.show #dataPoint4').addClass('selected');
-      $('.dataPoints').show();
-      $('#map').css('opacity', '.3');
-    },500);
+    var x2 = newZipGreen();
+    console.log(x2 +"first")
+    if (x2 == '' || tester==false) {
+      $('.warning').html('Please enter a valid zip code');
+    } else {
+      setTimeout(function() {
+        $('#greenModal').modal('hide');
+        $('.bikeScene').hide();
+        $('.show #dataPoint4').addClass('selected');
+        $('.dataPoints').show();
+        $('#map').css('opacity', '.3');
+        $('.warning').html('');
+        tester=false;
+      },500);
+    }
   });
   $('#blueModal #zipClick').click(function(event) {
     event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    newZipBlue();
-    setTimeout(function() {
-      $('#blueModal').modal('hide');
-      $('.bikeScene').hide();
-      $('.show #dataPoint2').addClass('selected');
-      $('.dataPoints').show();
-      $('#map').css('opacity', '.3');
-    },500);
+    var x3 = newZipBlue();
+    console.log(x3 +"first")
+    if (x3 == '' || tester==false) {
+      $('.warning').html('Please enter a valid zip code');
+    } else {
+      setTimeout(function() {
+        $('#blueModal').modal('hide');
+        $('.bikeScene').hide();
+        $('.show #dataPoint2').addClass('selected');
+        $('.dataPoints').show();
+        $('#map').css('opacity', '.3');
+        $('.warning').html('');
+        tester=false;
+      },500);
+    }
   });
 
   $('#next').on('click', getNext);
