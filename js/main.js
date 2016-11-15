@@ -1,6 +1,13 @@
 
 var colorPick;
 var housingPick;
+var fixed = document.getElementById('chrBody');
+
+fixed.addEventListener('touchmove', function(e) {
+
+        e.preventDefault();
+
+}, false);
 
 $(document).ready(function(){
     $('#openModal').modal('show');
@@ -13,7 +20,7 @@ $(document).ready(function(){
     var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
     if ((is_chrome)&&(is_safari)) {is_safari=false;}
     if ((is_chrome)&&(is_opera)) {is_chrome=false;}
-    if (is_safari) {
+    if (is_safari || is_explorer) {
       $('form input[type=submit]').css('display','inline-block');
     }
     if (is_firefox) {

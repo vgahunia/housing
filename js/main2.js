@@ -73,8 +73,8 @@ window.onload = function() {
     return newZipValue;
   }
 
-  $('#yellowModal #zipClick').click(function(e) {
-    e.preventDefault ? event.preventDefault() : (event.returnValue = false);
+  $('#yellowModal #zipClick').click(function(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     var x = newZip();
     console.log(x +"first")
     if (x == '' || tester==false) {
