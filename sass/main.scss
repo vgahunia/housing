@@ -328,6 +328,7 @@ body{
     h3{
         font-size: 14pt;
         margin-bottom: 15px;
+        height: 40px;
     }
     .yellowValue .dataValue, .yellowValue h3{
         color:rgb(255,201,10);
@@ -338,12 +339,13 @@ body{
     .blueValue .dataValue, .blueValue h3{
         color:rgb(26,144,208);
     }
-    .greenValue .dataValue, .greenValue h3{
+    .greenValue .dataValue, .greenValue h3, .greenValue2 .dataValue, .greenValue2 h3{
         color:rgb(43,179,75);
     }
     .description{
         font-size: 9.5pt;
         margin-bottom: 10px;
+        height: 50px;
     }
     button{
         display: block;
@@ -353,8 +355,9 @@ body{
         color: white;
         font-size: 8pt;
         margin-top:15px;
+        padding: 5px;
     }
-    .greenValue button{
+    .greenValue button, .greenValue2 button{
         background-color: rgb(43,179,75);
     }
     .yellowValue button{

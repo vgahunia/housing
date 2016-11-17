@@ -47,7 +47,8 @@ window.onload = function() {
     $('#dataPoint1 .dataValue').html(air);
     $('#dataPoint2 .dataValue').html(water);
     $('#dataPoint3 .dataValue').html(housing + "%");
-    $('#dataPoint4 .dataValue').html(drive + "% / " + driveLong + "%");
+    $('#dataPoint4 .dataValue').html(drive + "%");
+    $('#dataPoint5 .dataValue').html(driveLong + "%");
   }
 // END
 

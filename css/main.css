@@ -258,18 +258,20 @@ body {
     margin: 0 auto; }
   .dataPoints h3 {
     font-size: 14pt;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    height: 40px; }
   .dataPoints .yellowValue .dataValue, .dataPoints .yellowValue h3 {
     color: #ffc90a; }
   .dataPoints .redValue .dataValue, .dataPoints .redValue h3 {
     color: #e61d25; }
   .dataPoints .blueValue .dataValue, .dataPoints .blueValue h3 {
     color: #1a90d0; }
-  .dataPoints .greenValue .dataValue, .dataPoints .greenValue h3 {
+  .dataPoints .greenValue .dataValue, .dataPoints .greenValue h3, .dataPoints .greenValue2 .dataValue, .dataPoints .greenValue2 h3 {
     color: #2bb34b; }
   .dataPoints .description {
     font-size: 9.5pt;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    height: 50px; }
   .dataPoints button {
     display: block;
     margin: 0 auto;
@@ -277,8 +279,9 @@ body {
     border-radius: 5px;
     color: white;
     font-size: 8pt;
-    margin-top: 15px; }
-  .dataPoints .greenValue button {
+    margin-top: 15px;
+    padding: 5px; }
+  .dataPoints .greenValue button, .dataPoints .greenValue2 button {
     background-color: #2bb34b; }
   .dataPoints .yellowValue button {
     background-color: #ffc90a; }
