@@ -88,6 +88,24 @@ $(document).ready(function(){
       $('#whatWorksModal').modal('show');
     })
 
+    $('.back2').click(function() {
+      $('#whatWorksModal').modal('hide');
+      switch (colorPick) {
+        case 'red':
+            $('#redModal').modal('show');
+            break;
+        case 'blue':
+            $('#blueModal').modal('show');
+            break;
+        case 'green':
+            $('#greenModal').modal('show');
+            break;
+        case 'yellow':
+            $('#yellowModal').modal('show');
+            break;
+      }
+    })
+
     function getColorData() {
       var colorDataPull, colorData;
       function setUp(data) {
