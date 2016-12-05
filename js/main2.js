@@ -160,7 +160,7 @@ window.onload = function() {
 
   function getPrev() {
     var $curr = $('.show .selected'),
-        $next = ($curr.prev().length) ? $curr.prev() : $('.show div').last();
+        $next = ($curr.prev().length) ? $curr.prev() : $('.show .yellowValue');
     $curr.removeClass('selected');
     $next.addClass('selected');
     // transition($curr, $next);

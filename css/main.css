@@ -234,6 +234,13 @@ body {
     padding: 10px;
     font-size: 13px; }
 
+.back_menuModal {
+  width: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px; }
+
 /* ==============================================
 --------------------- DATA ----------------------
 ================================================ */
@@ -348,66 +355,76 @@ form {
 #whatWorksBody {
   margin-bottom: 20px; }
   #whatWorksBody .back2 {
-    width: 45px;
+    width: 50px;
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 20px; }
-  #whatWorksBody h1 {
+    right: 10px;
+    top: 5px; }
+  #whatWorksBody .ww_title h1 {
     margin-top: -60px;
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 4px; }
-  #whatWorksBody h6 {
+    #whatWorksBody .ww_title h1 .ww_next, #whatWorksBody .ww_title h1 .ww_prev {
+      font-size: 14px;
+      cursor: pointer; }
+  #whatWorksBody .ww_title h6 {
     margin-top: 0; }
-  #whatWorksBody div {
+  #whatWorksBody .ww_button img {
+    width: 30px;
+    margin-top: -60px;
+    cursor: pointer; }
+  #whatWorksBody table {
+    margin: 0 auto;
+    text-align: center; }
+  #whatWorksBody .colorData {
     text-align: left;
     margin-right: 30px;
     margin-left: 30px;
     max-height: 400px;
     overflow-y: scroll; }
-    #whatWorksBody div h3 {
+    #whatWorksBody .colorData h3 {
       font-size: 15px; }
-    #whatWorksBody div h5 {
+    #whatWorksBody .colorData h5 {
       font-size: 13px; }
-    #whatWorksBody div span {
+    #whatWorksBody .colorData span {
       font-size: 11px; }
-    #whatWorksBody div p {
+    #whatWorksBody .colorData p {
       float: left;
       margin-top: 5px;
       margin-bottom: 10px;
       font-size: 12px;
       margin-right: 10px; }
-    #whatWorksBody div img {
+    #whatWorksBody .colorData img {
       float: left;
       width: 25px;
       display: inline-block; }
-    #whatWorksBody div hr {
+    #whatWorksBody .colorData hr {
       margin-top: 5px;
       clear: both; }
 
 .wwRed h1 {
   color: #e61d25; }
 
-.wwRed .colorData h3 {
+.wwRed .colorData h3, .wwRed .colorData h3 a {
   color: #e61d25; }
 
 .wwYellow h1 {
   color: #ffc90a; }
 
-.wwYellow .colorData h3 {
+.wwYellow .colorData h3, .wwYellow .colorData h3 a {
   color: #ffc90a; }
 
 .wwGreen h1 {
   color: #2bb34b; }
 
-.wwGreen .colorData h3 {
+.wwGreen .colorData h3, .wwGreen .colorData h3 a {
   color: #2bb34b; }
 
 .wwBlue h1 {
   color: #1a90d0; }
 
-.wwBlue .colorData h3 {
+.wwBlue .colorData h3, .wwBlue .colorData h3 a {
   color: #1a90d0; }
 
 /* ==============================================
