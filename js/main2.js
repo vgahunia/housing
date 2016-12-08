@@ -195,8 +195,9 @@ window.onload = function() {
   });
 
   // $('.bikeScene img').mouseenter(function() {
-  //   $(this).removeClass('bounce').addClass('bounce');
+  //   $(this).removeClass().addClass('hvr-wobble-vertical');
   // })
+
   function bikeScene() {
     $('.bikeScene').show();
     $('.nav').show();
@@ -216,7 +217,11 @@ window.onload = function() {
       $('#red').css('opacity','1').addClass('bounce');
     }, 1600);
     setTimeout(function(){
-        $('.scene').removeClass().addClass('pulse');
+        $('.bikeScene #yellow').css('animation-delay','initial');
+        $('.bikeScene #red').css('animation-delay','initial');
+        $('.bikeScene #green').css('animation-delay','initial');
+        $('.bikeScene #blue').css('animation-delay','initial');
+        $('.scene').removeClass('bounce').addClass('hvr-wobble-vertical');
     }, 5500)
   }
 }
