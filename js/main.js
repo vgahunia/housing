@@ -110,9 +110,21 @@ $(document).ready(function(){
           break;
         }
       }
-      console.log("After" + colorPick);
       getWhatWorks();
     });
+
+    $('#ww_city').click(function() {
+      housingPick="city";
+      getWhatWorks();
+    })
+    $('#ww_suburb').click(function() {
+      housingPick="suburb";
+      getWhatWorks();
+    })
+    $('#ww_rural').click(function() {
+      housingPick="rural";
+      getWhatWorks();
+    })
 
     $('.whatWorks').click(function() {
       $('.modal').modal('hide');
@@ -170,7 +182,7 @@ $(document).ready(function(){
     }
     function placeColorData(array) {
       $('.colorData').empty();
-      $('.colorData').append(housingPick + "<br>");
+      // $('.colorData').append(housingPick + "<br>");
       for (var i=0;i<array.length;i++) {
         if ((housingPick==array[i].housingPick || housingPick==array[i].housingPick2) && (colorPick==array[i].colorPick || colorPick==array[i].colorPick2)) {
           var hf = array[i].healthFactor;

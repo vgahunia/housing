@@ -376,15 +376,39 @@ form {
     cursor: pointer; }
   #whatWorksBody table {
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    width: 90%; }
+  #whatWorksBody hr {
+    margin: 0;
+    clear: both; }
+  #whatWorksBody .ww_mapLinks {
+    width: 310px;
+    margin: 0 auto; }
+    #whatWorksBody .ww_mapLinks .mapLink {
+      text-align: center;
+      float: left;
+      width: 100px;
+      cursor: pointer; }
+      #whatWorksBody .ww_mapLinks .mapLink img {
+        width: 30px;
+        height: 30px;
+        transition: all .3s ease; }
+      #whatWorksBody .ww_mapLinks .mapLink img:hover {
+        width: 28px;
+        height: 28px; }
+      #whatWorksBody .ww_mapLinks .mapLink h5 {
+        color: #143c69;
+        margin-top: 8px;
+        font-size: 9pt; }
   #whatWorksBody .colorData {
     text-align: left;
     margin-right: 30px;
     margin-left: 30px;
-    max-height: 400px;
+    max-height: 360px;
     overflow-y: scroll; }
     #whatWorksBody .colorData h3 {
-      font-size: 15px; }
+      font-size: 15px;
+      margin-top: 5px; }
     #whatWorksBody .colorData h5 {
       font-size: 13px; }
     #whatWorksBody .colorData span {
@@ -403,28 +427,28 @@ form {
       margin-top: 5px;
       clear: both; }
 
-.wwRed h1 {
+#whatWorksBody.wwRed h1, #whatWorksBody.wwRed .ww_mapLinks .mapLink h5 {
   color: #e61d25; }
 
-.wwRed .colorData h3, .wwRed .colorData h3 a {
+#whatWorksBody.wwRed .colorData h3, #whatWorksBody.wwRed .colorData h3 a {
   color: #e61d25; }
 
-.wwYellow h1 {
+#whatWorksBody.wwYellow h1, #whatWorksBody.wwYellow .ww_mapLinks .mapLink h5 {
   color: #ffc90a; }
 
-.wwYellow .colorData h3, .wwYellow .colorData h3 a {
+#whatWorksBody.wwYellow .colorData h3, #whatWorksBody.wwYellow .colorData h3 a {
   color: #ffc90a; }
 
-.wwGreen h1 {
+#whatWorksBody.wwGreen h1, #whatWorksBody.wwGreen .ww_mapLinks .mapLink h5 {
   color: #2bb34b; }
 
-.wwGreen .colorData h3, .wwGreen .colorData h3 a {
+#whatWorksBody.wwGreen .colorData h3, #whatWorksBody.wwGreen .colorData h3 a {
   color: #2bb34b; }
 
-.wwBlue h1 {
+#whatWorksBody.wwBlue h1, #whatWorksBody.wwBlue .ww_mapLinks .mapLink h5 {
   color: #1a90d0; }
 
-.wwBlue .colorData h3, .wwBlue .colorData h3 a {
+#whatWorksBody.wwBlue .colorData h3, #whatWorksBody.wwBlue .colorData h3 a {
   color: #1a90d0; }
 
 /* ==============================================
@@ -709,6 +733,10 @@ form {
 .pulse {
   -webkit-animation: pulse 2700ms linear 4 both;
   animation: pulse 2700ms linear 4 both; }
+
+.pulse2 {
+  -webkit-animation: pulse 2700ms linear 1 both;
+  animation: pulse 2700ms linear 1 both; }
 
 /* Generated with Bounce.js. Edit at https://goo.gl/Q4PVuV */
 @-webkit-keyframes pulse {

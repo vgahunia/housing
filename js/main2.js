@@ -194,6 +194,9 @@ window.onload = function() {
     bikeScene();
   });
 
+  // $('.bikeScene img').mouseenter(function() {
+  //   $(this).removeClass('bounce').addClass('bounce');
+  // })
   function bikeScene() {
     $('.bikeScene').show();
     $('.nav').show();
