@@ -308,8 +308,7 @@ body {
 
 .show .showDiv {
   display: none;
-  margin: 0 auto;
-  width: 320px; }
+  margin: 0 auto; }
 
 .show .selected {
   display: block; }
@@ -725,7 +724,15 @@ form {
     margin-left: 10px;
     margin-right: 10px; }
   #whatWorksBody div {
-    max-height: 300px; } }
+    max-height: 300px; }
+  #whatWorksBody .colorData {
+    max-height: 250px; }
+  #whatWorksBody table {
+    width: inherit; }
+  #whatWorksBody .ww_mapLinks {
+    width: 90%; }
+    #whatWorksBody .ww_mapLinks .mapLink {
+      width: 80px; } }
 
 /* ==============================================
 ------------------- ANIMATION--------------------
