@@ -624,7 +624,7 @@ form {
         padding-left: 5px;
         padding-right: 5px; } }
 
-@media only screen and (max-device-width: 470px) {
+@media only screen and (max-device-width: 375px) {
   body {
     width: 100vw;
     position: fixed; }
@@ -633,8 +633,8 @@ form {
   #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal {
     width: 100vw; }
   #banner {
-    width: 109%;
-    left: -37px;
+    width: 111%;
+    left: -34px;
     z-index: 3; }
   #smallBanner {
     display: none; }
@@ -642,7 +642,7 @@ form {
     width: 100%; }
     #openModal .modal-dialog {
       width: 350px;
-      left: 22px; }
+      left: 27px; }
       #openModal .modal-dialog .modal-content {
         width: 320px; }
   .mapBack #map {
@@ -684,7 +684,7 @@ form {
   .dataButtons #prev {
     left: 5px; } }
 
-@media only screen and (max-device-width: 380px) {
+@media only screen and (max-device-width: 320px) {
   #greenModal .modal-dialog, #blueModal .modal-dialog, #yellowModal .modal-dialog, #redModal .modal-dialog {
     margin-top: 40px;
     margin-left: 10px;

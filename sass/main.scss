@@ -812,7 +812,10 @@ form{
     }
   }
 }
-@media only screen and (max-device-width: 470px) {
+@media only screen and (max-device-width: 375px) {
+//-------------
+// iPHONE 6
+//-------------
     body{
         width:100vw;
         position: fixed;
@@ -824,8 +827,8 @@ form{
         width:100vw;
     }
   #banner{
-    width:109%;
-    left:-37px;
+    width:111%;
+    left:-34px;
     z-index: 3;
   }
     #smallBanner{
@@ -835,7 +838,7 @@ form{
     width:100%;
     .modal-dialog{
         width:350px;
-        left:22px;
+        left:27px;
         .modal-content{
             width:320px;
         }
@@ -895,7 +898,10 @@ form{
     }
   }
 }
-@media only screen and (max-device-width: 380px) {
+@media only screen and (max-device-width: 320px) {
+//-------------
+// iPHONE 5
+//-------------
     #greenModal .modal-dialog, #blueModal .modal-dialog, #yellowModal .modal-dialog, #redModal .modal-dialog{
         margin-top: 40px;
         margin-left: 10px;
