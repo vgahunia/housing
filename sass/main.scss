@@ -253,10 +253,6 @@ body{
     -webkit-box-shadow: 0 0 15px rgb(190,190,190);
     box-shadow: 0 0 15px rgb(190,190,190);
     text-align: center;
-    .modal-body p{
-        margin-top: -50px;
-        margin-bottom: 20px;
-    }
 }
 #redModal{
     button{
@@ -287,7 +283,15 @@ body{
 .zipField{
     display: none;
     margin-bottom: 30px;
+    margin-top: -60px;
     position: relative;
+    p{line-height: 14.5px;}
+    h3{
+        max-width:400px;
+        margin:10px auto;
+        margin-bottom: 15px;
+        font-size: 19px;
+    }
     input{
         text-align: center;
     }
@@ -298,6 +302,20 @@ body{
         padding: 10px;
         font-size: 13px;
     }
+}
+#blueModal .zipField h3{color:rgb(26,144,208);}
+#redModal .zipField h3{color:rgb(230,29,37);}
+#greenModal .zipField h3{color:rgb(43,179,75);}
+#yellowModal .zipField h3{color:rgb(255,201,10);}
+
+#blueModal .zipField input{border:1px dotted rgb(26,144,208);}
+#redModal .zipField input{border:1px dotted rgb(230,29,37);}
+#greenModal .zipField input{border:1px dotted rgb(43,179,75);}
+#yellowModal .zipField input{border:1px dotted rgb(255,201,10);}
+
+.contentMain p{
+    margin-top: -50px;
+    margin-bottom: 20px;
 }
 .back_menuModal{
     width:50px;
@@ -337,10 +355,11 @@ body{
         margin-bottom: 15px;
     }
     .info{
-        height:100px;
+        height:140px;
         h3{
-            font-size: 16pt;
+            font-size: 15pt;
             font-weight: bold;
+            width:280px;
         }
     }
     .yellowValue .dataValue, .yellowValue h3{
@@ -398,9 +417,6 @@ body{
 }
 .show .selected {
     display: block;
-}
-form{
-    padding-top: 20px;
 }
 .dataButtons {
     position: relative;
@@ -884,6 +900,7 @@ form{
         left:5px;
     }
   }
+  .dataPoints .info{height:150px;}
 }
 @media only screen and (max-device-width: 320px) {
 //-------------

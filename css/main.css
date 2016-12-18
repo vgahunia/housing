@@ -198,9 +198,6 @@ body {
   -webkit-box-shadow: 0 0 15px #bebebe;
   box-shadow: 0 0 15px #bebebe;
   text-align: center; }
-  .border .modal-body p {
-    margin-top: -50px;
-    margin-bottom: 20px; }
 
 #redModal button {
   background-color: #e61d25; }
@@ -223,7 +220,15 @@ body {
 .zipField {
   display: none;
   margin-bottom: 30px;
+  margin-top: -60px;
   position: relative; }
+  .zipField p {
+    line-height: 14.5px; }
+  .zipField h3 {
+    max-width: 400px;
+    margin: 10px auto;
+    margin-bottom: 15px;
+    font-size: 19px; }
   .zipField input {
     text-align: center; }
   .zipField .warning {
@@ -232,6 +237,34 @@ body {
     height: 22px;
     padding: 10px;
     font-size: 13px; }
+
+#blueModal .zipField h3 {
+  color: #1a90d0; }
+
+#redModal .zipField h3 {
+  color: #e61d25; }
+
+#greenModal .zipField h3 {
+  color: #2bb34b; }
+
+#yellowModal .zipField h3 {
+  color: #ffc90a; }
+
+#blueModal .zipField input {
+  border: 1px dotted #1a90d0; }
+
+#redModal .zipField input {
+  border: 1px dotted #e61d25; }
+
+#greenModal .zipField input {
+  border: 1px dotted #2bb34b; }
+
+#yellowModal .zipField input {
+  border: 1px dotted #ffc90a; }
+
+.contentMain p {
+  margin-top: -50px;
+  margin-bottom: 20px; }
 
 .back_menuModal {
   width: 50px;
@@ -267,10 +300,11 @@ body {
     font-size: 14pt;
     margin-bottom: 15px; }
   .dataPoints .info {
-    height: 100px; }
+    height: 140px; }
     .dataPoints .info h3 {
-      font-size: 16pt;
-      font-weight: bold; }
+      font-size: 15pt;
+      font-weight: bold;
+      width: 280px; }
   .dataPoints .yellowValue .dataValue, .dataPoints .yellowValue h3 {
     color: #ffc90a; }
   .dataPoints .redValue .dataValue, .dataPoints .redValue h3 {
@@ -315,9 +349,6 @@ body {
 
 .show .selected {
   display: block; }
-
-form {
-  padding-top: 20px; }
 
 .dataButtons {
   position: relative; }
@@ -676,7 +707,9 @@ form {
   .dataButtons #next {
     left: 340px; }
   .dataButtons #prev {
-    left: 5px; } }
+    left: 5px; }
+  .dataPoints .info {
+    height: 150px; } }
 
 @media only screen and (max-device-width: 320px) {
   #greenModal .modal-dialog, #blueModal .modal-dialog, #yellowModal .modal-dialog, #redModal .modal-dialog {
