@@ -242,9 +242,8 @@ body{
         margin-bottom: 5px;
         padding:5px;
     }
-    button a{
+    a{
         display:block;
-        padding:4px;
         color:white;
         text-decoration: none;
     }
@@ -326,7 +325,7 @@ body{
         margin-bottom: 10px;
     }
     .topPerformer{
-        font-size: 7pt;
+        font-size: 9pt;
         color:black;
         margin-bottom: 10px;
     }
@@ -339,6 +338,10 @@ body{
     }
     .info{
         height:100px;
+        h3{
+            font-size: 16pt;
+            font-weight: bold;
+        }
     }
     .yellowValue .dataValue, .yellowValue h3{
         color:rgb(255,201,10);
@@ -353,34 +356,35 @@ body{
         color:rgb(43,179,75);
     }
     .description{
-        font-size: 9.5pt;
+        font-size: 10.5pt;
         margin-bottom: 10px;
     }
-    button{
+    a{
         display: block;
         margin:0 auto;
         border:none;
         border-radius: 5px;
         color: white;
-        font-size: 8pt;
+        font-size: 9pt;
         margin-top:15px;
-        padding: 5px;
+        padding: 7px;
+        width:150px;
     }
-    .greenValue button, .greenValue2 button{
+    .greenValue a, .greenValue2 a{
         background-color: rgb(43,179,75);
     }
-    .yellowValue button{
+    .yellowValue a{
         background-color: rgb(255,201,10);
     }
-    .blueValue button{
+    .blueValue a{
         background-color: rgb(26,144,208);
     }
-    .redValue button{
+    .redValue a{
         background-color: rgb(230,29,37);
     }
 }
 .dataValue{
-    font-size: 20pt;
+    font-size: 22pt;
     font-weight: bold;
 }
 .show {
@@ -468,7 +472,7 @@ form{
         width:90%;
     }
     hr{
-        margin:0;
+        margin:10px;
         clear:both;
     }
     .ww_mapLinks{
@@ -501,9 +505,10 @@ form{
         margin-left: 30px;
         max-height:360px;
         overflow-y:scroll;
-        h3{font-size: 15px;margin-top: 5px;}
+        h3{font-size: 15px;margin-top: 5px; margin-bottom: 5px;}
         h5{ font-size:13px;}
-        span{font-size: 11px;}
+        h4{font-size: 11px;margin-top:0}
+        h4 a{color:black;}
         p{ 
             float:left;
             margin-top:5px; 
@@ -527,7 +532,7 @@ form{
         color: rgb(230,29,37);
     }
     .colorData{
-        h3, h3 a{
+        h3, h3 a, h4 a span, h4{
             color: rgb(230,29,37);
         }
     }
@@ -537,7 +542,7 @@ form{
         color: rgb(255,201,10);
     }
     .colorData{
-        h3, h3 a{
+        h3, h3 a, h4 a span, h4{
             color: rgb(255,201,10);
         }
     }
@@ -547,7 +552,7 @@ form{
         color: rgb(43,179,75);
     }
     .colorData{
-        h3, h3 a{
+        h3, h3 a, h4 a span, h4{
             color: rgb(43,179,75);
         }
     }
@@ -557,7 +562,7 @@ form{
         color: rgb(26,144,208);
     }
     .colorData{
-        h3, h3 a{
+        h3, h3 a, h4 a span, h4{
             color: rgb(26,144,208);
         }
     }
@@ -752,31 +757,24 @@ form{
         margin-right: 10px;
     }
     #whatWorksBody div {
-    max-height: 300px;
-}
-}
-
-
-
-@media only screen and (max-device-width: 1280px) {
-    .mapBack{
-        overflow:visible;
-      }
-}
-
-@media only screen and (max-device-width: 1080px) {
-  .bikeScene{
-    top:400px;
-    left:50px;
-    #bike.ride{
-        left:60px;
-        top:-30px;
-        opacity: 1;
+        max-height: 300px;
     }
-  }
 }
 
-@media only screen and (max-device-width: 864px) {
+
+//Cell Phones
+
+@media only screen and (max-device-width: 414px) {
+    body{
+        width:100vw;
+        position: fixed;
+    }
+    .show div{
+        width:auto;
+    }
+    #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal{
+        width:100vw;
+    }
     .mapBack{
         #map{
             top:0px;
@@ -785,7 +783,6 @@ form{
             top:-650px;
         }
     }
-
   #banner{
     width:122.5%;
     top:20px;
@@ -793,7 +790,7 @@ form{
   }
   .bikeScene {
     left: 22px;
-}
+    }
   #openModal{
     width:440px;
     margin:0 auto;
@@ -816,16 +813,6 @@ form{
 //-------------
 // iPHONE 6
 //-------------
-    body{
-        width:100vw;
-        position: fixed;
-    }
-    .show div{
-        width:auto;
-    }
-    #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal{
-        width:100vw;
-    }
   #banner{
     width:111%;
     left:-34px;

@@ -188,9 +188,8 @@ body {
     border-radius: 5px;
     margin-bottom: 5px;
     padding: 5px; }
-  .buttonBay button a {
+  .buttonBay a {
     display: block;
-    padding: 4px;
     color: white;
     text-decoration: none; }
 
@@ -259,7 +258,7 @@ body {
     margin: 0 auto;
     margin-bottom: 10px; }
   .dataPoints .topPerformer {
-    font-size: 7pt;
+    font-size: 9pt;
     color: black;
     margin-bottom: 10px; }
   .dataPoints p, .dataPoints h3 {
@@ -269,6 +268,9 @@ body {
     margin-bottom: 15px; }
   .dataPoints .info {
     height: 100px; }
+    .dataPoints .info h3 {
+      font-size: 16pt;
+      font-weight: bold; }
   .dataPoints .yellowValue .dataValue, .dataPoints .yellowValue h3 {
     color: #ffc90a; }
   .dataPoints .redValue .dataValue, .dataPoints .redValue h3 {
@@ -278,28 +280,29 @@ body {
   .dataPoints .greenValue .dataValue, .dataPoints .greenValue h3, .dataPoints .greenValue2 .dataValue, .dataPoints .greenValue2 h3 {
     color: #2bb34b; }
   .dataPoints .description {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     margin-bottom: 10px; }
-  .dataPoints button {
+  .dataPoints a {
     display: block;
     margin: 0 auto;
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 8pt;
+    font-size: 9pt;
     margin-top: 15px;
-    padding: 5px; }
-  .dataPoints .greenValue button, .dataPoints .greenValue2 button {
+    padding: 7px;
+    width: 150px; }
+  .dataPoints .greenValue a, .dataPoints .greenValue2 a {
     background-color: #2bb34b; }
-  .dataPoints .yellowValue button {
+  .dataPoints .yellowValue a {
     background-color: #ffc90a; }
-  .dataPoints .blueValue button {
+  .dataPoints .blueValue a {
     background-color: #1a90d0; }
-  .dataPoints .redValue button {
+  .dataPoints .redValue a {
     background-color: #e61d25; }
 
 .dataValue {
-  font-size: 20pt;
+  font-size: 22pt;
   font-weight: bold; }
 
 .show {
@@ -378,7 +381,7 @@ form {
     text-align: center;
     width: 90%; }
   #whatWorksBody hr {
-    margin: 0;
+    margin: 10px;
     clear: both; }
   #whatWorksBody .ww_mapLinks {
     width: 310px;
@@ -407,11 +410,15 @@ form {
     overflow-y: scroll; }
     #whatWorksBody .colorData h3 {
       font-size: 15px;
-      margin-top: 5px; }
+      margin-top: 5px;
+      margin-bottom: 5px; }
     #whatWorksBody .colorData h5 {
       font-size: 13px; }
-    #whatWorksBody .colorData span {
-      font-size: 11px; }
+    #whatWorksBody .colorData h4 {
+      font-size: 11px;
+      margin-top: 0; }
+    #whatWorksBody .colorData h4 a {
+      color: black; }
     #whatWorksBody .colorData p {
       float: left;
       margin-top: 5px;
@@ -429,25 +436,25 @@ form {
 #whatWorksBody.wwRed h1, #whatWorksBody.wwRed .ww_mapLinks .mapLink h5 {
   color: #e61d25; }
 
-#whatWorksBody.wwRed .colorData h3, #whatWorksBody.wwRed .colorData h3 a {
+#whatWorksBody.wwRed .colorData h3, #whatWorksBody.wwRed .colorData h3 a, #whatWorksBody.wwRed .colorData h4 a span, #whatWorksBody.wwRed .colorData h4 {
   color: #e61d25; }
 
 #whatWorksBody.wwYellow h1, #whatWorksBody.wwYellow .ww_mapLinks .mapLink h5 {
   color: #ffc90a; }
 
-#whatWorksBody.wwYellow .colorData h3, #whatWorksBody.wwYellow .colorData h3 a {
+#whatWorksBody.wwYellow .colorData h3, #whatWorksBody.wwYellow .colorData h3 a, #whatWorksBody.wwYellow .colorData h4 a span, #whatWorksBody.wwYellow .colorData h4 {
   color: #ffc90a; }
 
 #whatWorksBody.wwGreen h1, #whatWorksBody.wwGreen .ww_mapLinks .mapLink h5 {
   color: #2bb34b; }
 
-#whatWorksBody.wwGreen .colorData h3, #whatWorksBody.wwGreen .colorData h3 a {
+#whatWorksBody.wwGreen .colorData h3, #whatWorksBody.wwGreen .colorData h3 a, #whatWorksBody.wwGreen .colorData h4 a span, #whatWorksBody.wwGreen .colorData h4 {
   color: #2bb34b; }
 
 #whatWorksBody.wwBlue h1, #whatWorksBody.wwBlue .ww_mapLinks .mapLink h5 {
   color: #1a90d0; }
 
-#whatWorksBody.wwBlue .colorData h3, #whatWorksBody.wwBlue .colorData h3 a {
+#whatWorksBody.wwBlue .colorData h3, #whatWorksBody.wwBlue .colorData h3 a, #whatWorksBody.wwBlue .colorData h4 a span, #whatWorksBody.wwBlue .colorData h4 {
   color: #1a90d0; }
 
 /* ==============================================
@@ -586,20 +593,14 @@ form {
   #whatWorksBody div {
     max-height: 300px; } }
 
-@media only screen and (max-device-width: 1280px) {
-  .mapBack {
-    overflow: visible; } }
-
-@media only screen and (max-device-width: 1080px) {
-  .bikeScene {
-    top: 400px;
-    left: 50px; }
-    .bikeScene #bike.ride {
-      left: 60px;
-      top: -30px;
-      opacity: 1; } }
-
-@media only screen and (max-device-width: 864px) {
+@media only screen and (max-device-width: 414px) {
+  body {
+    width: 100vw;
+    position: fixed; }
+  .show div {
+    width: auto; }
+  #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal {
+    width: 100vw; }
   .mapBack #map {
     top: 0px; }
   .mapBack #map.rural, .mapBack #map.city, .mapBack #map.suburb {
@@ -625,13 +626,6 @@ form {
         padding-right: 5px; } }
 
 @media only screen and (max-device-width: 375px) {
-  body {
-    width: 100vw;
-    position: fixed; }
-  .show div {
-    width: auto; }
-  #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal {
-    width: 100vw; }
   #banner {
     width: 111%;
     left: -34px;

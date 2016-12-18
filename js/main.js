@@ -113,18 +113,18 @@ $(document).ready(function(){
       getWhatWorks();
     });
 
-    $('#ww_city').click(function() {
-      housingPick="city";
-      getWhatWorks();
-    })
-    $('#ww_suburb').click(function() {
-      housingPick="suburb";
-      getWhatWorks();
-    })
-    $('#ww_rural').click(function() {
-      housingPick="rural";
-      getWhatWorks();
-    })
+    // $('#ww_city').click(function() {
+    //   housingPick="city";
+    //   getWhatWorks();
+    // })
+    // $('#ww_suburb').click(function() {
+    //   housingPick="suburb";
+    //   getWhatWorks();
+    // })
+    // $('#ww_rural').click(function() {
+    //   housingPick="rural";
+    //   getWhatWorks();
+    // })
 
     $('.whatWorks').click(function() {
       $('.modal').modal('hide');
@@ -189,9 +189,9 @@ $(document).ready(function(){
           var approach = array[i].approach;
           var title=array[i].title;
           var description=array[i].description;
-          var rating=array[i].rating;
+          var rating="<a href='http://www.countyhealthrankings.org/roadmaps/what-works-for-health/our-ratings' target='_blank'>Evidence of Effectiveness Rating: <span>" + array[i].rating + "</span></a>";
           var url=array[i].url;
-          var titleLink= '<a href="' + url + '">' + title + '</a>';
+          var titleLink= '<a href="' + url + '" target="_blank">' + title + '</a>';
           var img2, img;
           if (array[i].image) {
             var imgSource = array[i].image;
@@ -202,8 +202,8 @@ $(document).ready(function(){
             img2 = '<img src="' + img2Source + '">';
           } else img2="";
           $('.colorData').append(
-            "<h3>" + titleLink + 
-            "<span> (" + rating +")</span></h3>" +
+            "<h3>" + titleLink + "</h3>" +
+            "<h4> (" + rating + ")</h4>" +
             "<h5>" + description + "</h5>" +
             "<p>" + hf + "</p>" + img + img2 +
             "<hr>"
@@ -221,7 +221,7 @@ $(document).ready(function(){
 //--------------------------------------
   var allData = [
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Increase water conservation & preservation",
     "title": "Proper drug disposal programs",
     "description": "Establish programs that accept expired, unwanted, or unused medicines from designated users and dispose of them responsibly",
@@ -231,11 +231,11 @@ $(document).ready(function(){
     "housingPick2": "suburb",
     "colorPick": "blue",
     "colorPick2": "",
-    "image": "img/alcoholDrugUse.png",
-    "image2": "img/communitySafety.png"
+    "image": "",
+    "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Increase water conservation & preservation",
     "title": "Rain barrels",
     "description": "Use ready-made or home constructed barrel systems to collect and store rainwater from rooftops that would otherwise flow to storm drains and streams",
@@ -249,7 +249,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Reduce emissions from mobile sources",
     "title": "Clean diesel technology fleet transition programs",
     "description": "Replace or retrofit diesel buses to operate with clean diesel technology",
@@ -263,7 +263,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Reduce emissions from mobile sources",
     "title": "Scrap programs for old vehicles",
     "description": "Provide incentives to trade in old cars or light duty trucks with low fuel efficiency and high emissions and buy new vehicles with higher efficiency and lower emissions; also called scrappage or early retirement programs",
@@ -277,7 +277,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Reduce agriculture's environmental impacts",
     "title": "Integrated pest management (IPM) for agriculture & outdoor use",
     "description": "Support a four-tiered approach to outdoor pest control that minimizes potential hazards to people, property, and the environment",
@@ -305,7 +305,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Improve housing quality",
     "title": "Healthy home environment assessments",
     "description": "Train volunteers, professionals, or paraprofessionals to help residents assess and remediate environmental home health risks and recommend low cost changes (e.g., improved ventilation, integrated pest management, etc.)",
@@ -319,7 +319,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Improve housing quality",
     "title": "Household interim lead control measures",
     "description": "Inform parents about lead exposure pathways and cleaning and hygiene techniques and undertake minor repairs, specialized cleaning, or efforts to paint over lead paint",
@@ -333,7 +333,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Improve housing quality",
     "title": "Housing rehabilitation loan & grant programs",
     "description": "Provide funding, primarily to low or median income families, to repair, improve, or modernize dwellings and remove health or safety hazards",
@@ -347,7 +347,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Improve housing quality",
     "title": "Integrated pest management for indoor use",
     "description": "Support a four-tiered approach to indoor pest control that minimizes potential hazards to people, property, and the environment",
@@ -375,7 +375,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Improve housing quality",
     "title": "Radon mitigation programs",
     "description": "Prevent radon from entering occupied buildings and reduce existing indoor air radon levels via soil depressurization, home or room pressurization, heat recovery ventilation, etc.",
@@ -389,7 +389,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Improve housing quality",
     "title": "Weatherization Assistance Program (WAP)",
     "description": "Provide assistance to low income families to make their homes more energy efficient and to permanently reduce their energy bills",
@@ -403,7 +403,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Mixed-use development",
     "description": "Support a combination of land uses (e.g., residential, commercial, recreational) in development initiatives, often through zoning regulations",
@@ -417,7 +417,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Safe Routes to Schools",
     "description": "Promote walking and biking to school through education, incentives, and environmental changes; often called SRTS",
@@ -431,7 +431,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Speed enforcement detection devices",
     "description": "Use devices such as speed cameras, radar, etc. to enforce speed limits; devices can be permanent fixtures or be used manually by law enforcement officers",
@@ -445,7 +445,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Walking school buses",
     "description": "Arrange active transportation with a fixed route, designated stops, and pick up times when children can walk to school with adult chaperones",
@@ -459,7 +459,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Community Development Block Grants (CDBGs)",
     "description": "Provide funding for local community development activities such as affordable housing, anti-poverty programs, and infrastructure development",
@@ -473,7 +473,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Community land trusts",
     "description": "Purchase land to lease to low and middle income home owners and require them to sell the home back to the CLT or to another low income resident at an affordable price",
@@ -487,7 +487,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "HOME Investment Partnership Program",
     "description": "Provide grants to states and localities to fund activities that build, buy, or rehabilitate affordable housing for rent or homeownership or provide direct rental assistance to low income households",
@@ -501,7 +501,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Housing trust funds",
     "description": "Support funds that help create or maintain low income housing, subsidize rental housing, and assist low income homebuyers and non-profit housing developers",
@@ -515,7 +515,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Land banking",
     "description": "Acquire, hold, manage, and develop properties such as vacant lots, abandoned buildings, or foreclosures, and transition them to productive uses, often affordable housing developments",
@@ -543,7 +543,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Low Income Housing Tax Credits (LIHTCs)",
     "description": "Provide funding via tax credits at the state and local level to support development and rehabilitation costs of low income rental housing",
@@ -557,7 +557,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Ensure access to housing",
     "title": "Housing mediation services",
     "description": "Facilitate mediation between tenants and landlords to resolve conflict and prevent eviction",
@@ -571,7 +571,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Ensure access to housing",
     "title": "Rapid re-housing programs",
     "description": "Transition families and individuals experiencing homelessness into permanent housing quickly, often with supports such as short-term financial assistance, case management, landlord negotiations, etc.",
@@ -585,7 +585,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Increase water conservation & preservation",
     "title": "Permeable pavement projects",
     "description": "Use pervious concrete, porous asphalt, permeable interlocking pavers, open-jointed blocks or cells, or other permeable pavement in individual or commercial development efforts",
@@ -599,7 +599,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Increase water conservation & preservation",
     "title": "Rain gardens & other bioretention systems",
     "description": "Establish green infrastructure (e.g., rain gardens, bioretention cells, green roofs, planter boxes, bioswales, etc.) to allow rain water to soak into the ground",
@@ -613,7 +613,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Reduce emissions from mobile sources",
     "title": "Alternative fuels initiatives",
     "description": "Support alternative fuel and vehicle use via financial incentives (e.g., tax benefits, rebates, etc.), mandates (e.g., consumption targets or renewable fuel standards), research and development investments, etc.",
@@ -627,7 +627,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Reduce emissions from mobile sources",
     "title": "Carpool & rideshare programs",
     "description": "Help commuters share transportation through informal arrangements between individuals, formally arranged dynamic ridesharing programs, or other ride-matching services",
@@ -641,7 +641,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Air & Water Quality",
+    "healthFactor": "",
     "approach": "Reduce emissions from mobile sources",
     "title": "Vehicle inspection & maintenance (I/M) programs",
     "description": "Require scheduled testing of vehicles’ tailpipe and evaporative emissions; federally mandated in areas with particularly poor air quality",
@@ -655,7 +655,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Bike & pedestrian master plans",
     "description": "Establish a framework to increase walking and biking trails and improve connectivity of non-auto paths and trails in a particular area",
@@ -669,7 +669,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Multi-component workplace supports for active commuting",
     "description": "Provide physical infrastructure (e.g., bike parking or showers), educational or social support (e.g., walking groups), and financial incentives that support active commuting",
@@ -683,7 +683,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Out of town bypasses",
     "description": "Establish roads that avoid built-up areas such as towns, cities, or commercial/business districts",
@@ -697,7 +697,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Streetscape design",
     "description": "Enhance streetscapes with greater sidewalk coverage and walkway connectivity, street crossing safety features, traffic calming measures, and other design elements; often via Complete Streets",
@@ -711,7 +711,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Traffic calming",
     "description": "Modify the built environment to affect traffic speed and patterns via speed bumps, pedestrian refuge islands, etc.",
@@ -725,7 +725,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support active travel",
     "title": "Zoning regulations for land use policy",
     "description": "Use zoning regulations to address aesthetics and safety of the physical environment, street continuity and connectivity, residential density and proximity to businesses, schools, and recreation",
@@ -739,7 +739,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Affordable housing tax increment financing (TIF)",
     "description": "Create designated tax districts that generate revenue to invest in affordable housing initiatives, blight remediation, and, economic development efforts",
@@ -753,7 +753,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support affordable housing options",
     "title": "Inclusionary zoning",
     "description": "Require developers to reserve a proportion of housing units for low income residents via mandatory requirements or incentives such as density bonuses",
@@ -767,7 +767,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Ensure access to housing",
     "title": "Housing Choice Voucher Program (Section 8)",
     "description": "Provide eligible low and very low income families with vouchers to help cover the costs of rental housing; also called Section 8",
@@ -781,7 +781,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Ensure access to housing",
     "title": "Housing First",
     "description": "Provide rapid access to permanent housing and support (e.g., crisis intervention, needs assessment, case management), usually for chronically homeless individuals with persistent mental illness or substance abuse issues",
@@ -795,7 +795,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Ensure access to housing",
     "title": "Service-enriched housing",
     "description": "Provide permanent, basic rental housing with social services available onsite or by referral, usually for low income families, seniors, and people with disabilities",
@@ -809,7 +809,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support shared transportation",
     "title": "Carpool & rideshare programs",
     "description": "Help commuters share transportation through informal arrangements between individuals, formally arranged dynamic ridesharing programs, or other ride-matching services",
@@ -823,7 +823,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support shared transportation",
     "title": "Individual incentives for public transportation",
     "description": "Offer incentives such as free or discounted bus, rail, or transit passes, reimbursements, partial payments, or pre-tax payroll deductions to encourage individuals' use of existing public transit",
@@ -837,7 +837,7 @@ $(document).ready(function(){
     "image2": ""
   },
   {
-    "healthFactor": "Housing & Transit",
+    "healthFactor": "",
     "approach": "Support shared transportation",
     "title": "Public transportation systems",
     "description": "Introduce or expand transportation options that are available to the public and run on a scheduled timetable (e.g., buses, trains, ferries, rapid transit, etc.)",
