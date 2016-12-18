@@ -220,10 +220,8 @@ body {
 .zipField {
   display: none;
   margin-bottom: 30px;
-  margin-top: -60px;
+  margin-top: -50px;
   position: relative; }
-  .zipField p {
-    line-height: 14.5px; }
   .zipField h3 {
     max-width: 400px;
     margin: 10px auto;
@@ -304,7 +302,7 @@ body {
     .dataPoints .info h3 {
       font-size: 15pt;
       font-weight: bold;
-      width: 280px; }
+      max-width: 280px; }
   .dataPoints .yellowValue .dataValue, .dataPoints .yellowValue h3 {
     color: #ffc90a; }
   .dataPoints .redValue .dataValue, .dataPoints .redValue h3 {
@@ -709,7 +707,7 @@ body {
   .dataButtons #prev {
     left: 5px; }
   .dataPoints .info {
-    height: 150px; } }
+    height: 170px; } }
 
 @media only screen and (max-device-width: 320px) {
   #greenModal .modal-dialog, #blueModal .modal-dialog, #yellowModal .modal-dialog, #redModal .modal-dialog {
