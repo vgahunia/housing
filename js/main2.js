@@ -3,6 +3,7 @@ $(window).load(function() {
 })
 var tester=false;
 window.onload = function() {
+      // var myScroll = new IScroll('#wcolorData');
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var dataJson1 = JSON.stringify(housingData);
   var data = JSON.parse(dataJson1);
