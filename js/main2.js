@@ -1,9 +1,16 @@
+// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 $(window).load(function() {
   $(".loader").fadeOut("slow");
+  
 })
 var tester=false;
 window.onload = function() {
-      // var myScroll = new IScroll('#wcolorData');
+  // setTimeout(function() {
+  //   var myScroll = new IScroll('#wrapper', {
+  //       scrollbars: true,
+  //       mouseWheel: false
+  //   });
+  // },500);
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var dataJson1 = JSON.stringify(housingData);
   var data = JSON.parse(dataJson1);

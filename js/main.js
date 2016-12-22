@@ -754,7 +754,7 @@ $(document).ready(function(){
     "housingPick": "",
     "housingPick2": "",
     "housingPick3": "rural",
-    "colorPick": "",
+    "colorPick": "green",
     "colorPick2": "",
   }
 ]; 

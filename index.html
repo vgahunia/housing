@@ -9,9 +9,20 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
+	<script type="text/javascript">
+
+	var myScroll;
+
+	function loaded () {
+		myScroll = new IScroll('#wrapper');
+	}
+
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+	</script>
 </head>
 
-<body class="container-fluid" id="chrBody">
+<body class="container-fluid" id="chrBody" onload="loaded()">
 	<div class="loader"></div>
 	
 	<div class="mapBack">
@@ -344,8 +355,10 @@
 						</td>
 					</table>
 					<hr>
+					<div id="wrapper">
 					<div class="colorData" id="colorData">
 
+					</div>
 					</div>
 				</div>
 			</div>
