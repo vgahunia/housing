@@ -298,11 +298,16 @@ body {
     font-size: 14pt;
     margin-bottom: 15px; }
   .dataPoints .info {
-    height: 140px; }
+    height: 80px; }
     .dataPoints .info h3 {
       font-size: 15pt;
       font-weight: bold;
       max-width: 280px; }
+    .dataPoints .info .lower {
+      position: relative;
+      top: 10px; }
+  .dataPoints .info2 {
+    height: 140px; }
   .dataPoints .yellowValue .dataValue, .dataPoints .yellowValue h3 {
     color: #ffc90a; }
   .dataPoints .redValue .dataValue, .dataPoints .redValue h3 {
@@ -334,7 +339,7 @@ body {
     background-color: #e61d25; }
 
 .dataValue {
-  font-size: 22pt;
+  font-size: 26pt;
   font-weight: bold; }
 
 .show {
@@ -503,6 +508,26 @@ body {
   .bikeScene {
     top: 770px;
     left: 79px; }
+    .bikeScene #yellow {
+      top: -485px; }
+    .bikeScene #red {
+      top: -296px;
+      left: -179px; }
+    .bikeScene #blue {
+      top: 184px; }
+  .bikeScene img {
+    width: 180px; } }
+
+@media only screen and (max-device-width: 768px) {
+  .mapBack {
+    width: 100%;
+    left: 0; }
+  .mapBack #map {
+    width: 4800px;
+    top: -610px; }
+  .bikeScene {
+    top: 540px;
+    left: 46px; }
     .bikeScene #yellow {
       top: -485px; }
     .bikeScene #red {
