@@ -1,16 +1,9 @@
-// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
 $(window).load(function() {
   $(".loader").fadeOut("slow");
-  
 })
 var tester=false;
 window.onload = function() {
-  // setTimeout(function() {
-  //   var myScroll = new IScroll('#wrapper', {
-  //       scrollbars: true,
-  //       mouseWheel: false
-  //   });
-  // },500);
 // MATCHING DATA from data.js and SENDING DATA to VIEW
   var dataJson1 = JSON.stringify(housingData);
   var data = JSON.parse(dataJson1);
@@ -202,10 +195,6 @@ window.onload = function() {
     bikeScene();
   });
 
-  // $('.bikeScene img').mouseenter(function() {
-  //   $(this).removeClass().addClass('hvr-wobble-vertical');
-  // })
-
   function bikeScene() {
     $('.bikeScene').show();
     $('.nav').show();
@@ -233,3 +222,11 @@ window.onload = function() {
     }, 5500)
   }
 }
+document.addEventListener('touchmove', function (e) {
+  if(!$(e.target).closest('#wrapper .colorData').length){
+    e.preventDefault();
+    console.log('blokams');
+  } else {
+    console.log('ar blokams');
+  }
+}, false);

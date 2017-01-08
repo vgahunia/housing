@@ -22,9 +22,9 @@ body {
   .mapBack #map {
     position: relative;
     transition: all 1s ease;
-    width: 2400px;
+    width: 4400px;
     left: -600px;
-    top: -100px; }
+    top: -650px; }
 
 #map.city {
   left: -2700px;
@@ -597,7 +597,8 @@ body {
   .show div {
     width: auto; }
   #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal {
-    width: 100vw; }
+    width: 100vw;
+    height: 100%; }
   .mapBack #map {
     top: 0px; }
   .mapBack #map.rural, .mapBack #map.city, .mapBack #map.suburb {

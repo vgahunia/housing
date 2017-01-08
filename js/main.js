@@ -2,12 +2,6 @@
 var colorPick, housingPick, indexPick;
 var fixed = document.getElementById('chrBody');
 
-fixed.addEventListener('touchmove', function(e) {
-
-        e.preventDefault();
-
-}, false);
-
 $(document).ready(function(){
 
     $('#openModal').modal('show');

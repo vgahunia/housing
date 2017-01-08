@@ -22,9 +22,9 @@ body{
     #map{
         position: relative;
         transition:all 1s ease;
-        width:2400px;
+        width:4400px;
         left:-600px;
-        top:-100px;
+        top:-650px;
     }
 }
 #map.city{
@@ -728,6 +728,7 @@ body{
     }
     #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal{
         width:100vw;
+        height:100%;
     }
     .mapBack{
         #map{
