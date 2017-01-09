@@ -599,17 +599,21 @@ body{
 ================================================ */
 
 @media only screen and (max-device-width: 1024px) {
-    .mapBack {
-        width: 100%;
-        left:0;
+//-------------
+// iPAD PRO
+//-------------
+    body{
+        width:100vw;
+        position: fixed;
     }
+    .mapBack {left:0;}
     .mapBack #map {
         width: 4800px; 
         top: -360px;
     }
     .bikeScene {
         top: 770px;
-        left: 79px;
+        left: 99px;
         #yellow {top: -485px;}
         #red {
             top: -296px;
@@ -618,10 +622,18 @@ body{
         #blue {top: 184px;}
     }
     .bikeScene img {width: 180px;}
-    
+    .buttonBay button {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .dataPoints {margin: 120px auto;}
+    #whatWorksBody .colorData {max-height: 800px;}
 }
 
 @media only screen and (max-device-width: 768px) {
+//-------------
+// iPAD
+//-------------
     .mapBack {
         width: 100%;
         left:0;
@@ -641,7 +653,7 @@ body{
         #blue {top: 184px;}
     }
     .bikeScene img {width: 180px;}
-    
+    #whatWorksBody .colorData {max-height: 600px;}
 }
 
 //Cell Phones
@@ -719,6 +731,9 @@ body{
     .dataPoints .info{height:170px;}
 }
 @media only screen and (max-device-width: 414px) {
+//-------------
+// iPHONE 6 Plus
+//-------------
     body{
         width:100vw;
         position: fixed;
@@ -744,7 +759,7 @@ body{
     left:-40px;
   }
   .bikeScene {
-    left: 22px;
+    left: 50px;
     }
   #openModal{
     // width:440px;
@@ -760,11 +775,12 @@ body{
     }
   }
       #whatWorksBody .colorData{
-        max-height: 250px;
+        max-height: 390px;
         z-index:100;
         overflow-y:scroll;
         position: relative;
     }
+    .dataPoints .info {height: 90px;}
 }
 @media only screen and (max-device-width: 375px) {
 //-------------
@@ -831,15 +847,30 @@ body{
     }
   }
 
-      #whatWorksBody div {
-        max-height: 300px;
+  #whatWorksBody div {
+    max-height: 300px;
+  }
+  #whatWorksBody .colorData{
+    max-height: 300px;
+    z-index:100;
+    overflow-y:scroll;
+    position: relative;
+  }
+  .dataPoints .info {height: 80px;}
+  .dataPoints .info2 {height: 160px;}
+  .dataPoints {margin: 80px auto;}
+}
+@media only screen and (max-device-width: 360px) {
+//-------------
+//GALAXY S5
+//-------------
+    .bikeScene {
+        left: 33px;
     }
-    #whatWorksBody .colorData{
-        max-height: 250px;
-        z-index:100;
-        overflow-y:scroll;
-        position: relative;
-    }
+    .dataPoints .info {height: 90px;}
+    .dataPoints .info2 {height: 175px;}
+    .dataPoints {margin: 30px auto;}
+    .dataPoints .info h3 {max-width: 220px;}
 }
 @media only screen and (max-device-width: 320px) {
 //-------------
@@ -901,7 +932,7 @@ body{
         max-height: 300px;
     }
     #whatWorksBody .colorData{
-        max-height: 250px;
+        max-height: 270px;
     }
     #whatWorksBody table{
         width:inherit;

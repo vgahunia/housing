@@ -108,19 +108,6 @@ $(document).ready(function(){
       getWhatWorks();
     });
 
-    // $('#ww_city').click(function() {
-    //   housingPick="city";
-    //   getWhatWorks();
-    // })
-    // $('#ww_suburb').click(function() {
-    //   housingPick="suburb";
-    //   getWhatWorks();
-    // })
-    // $('#ww_rural').click(function() {
-    //   housingPick="rural";
-    //   getWhatWorks();
-    // })
-
     $('.whatWorks').click(function() {
       $('.modal').modal('hide');
       getWhatWorks();

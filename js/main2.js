@@ -39,17 +39,23 @@ window.onload = function() {
         var data5 = data[i].driveAloneLongCommute;
         var county = data[i].county;
         var state = data[i].state;
-        writeData(data1, data2, data3, data4, data5);
+        writeData(data1, data2, data3, data4, data5, county, state);
         console.log(county + " County" + ", " + state);
       }
     }
   }
-  function writeData(air, water, housing, drive, driveLong) {
+  function writeData(air, water, housing, drive, driveLong, county, state) {
+    state1=state.toLowerCase();
+    county1=county.replace(/\s+/g, '-').toLowerCase();
     $('#dataPoint1 .dataValue').html(air);
     $('#dataPoint2 .dataValue').html(water);
     $('#dataPoint3 .dataValue').html(housing + "%");
     $('#dataPoint4 .dataValue').html(drive + "%");
     $('#dataPoint5 .dataValue').html(driveLong + "%");
+    if (county1=="district-of-columbia"){
+      $('.dataPoints a').attr("href", "http://www.countyhealthrankings.org/app/district-of-columbia/2016/overview");
+    } else
+    $('.dataPoints a').attr("href", " http://www.countyhealthrankings.org/app/"+state1+"/2016/rankings/"+county1+"/county/outcomes/overall/snapshot");
   }
 // END
 
@@ -223,10 +229,11 @@ window.onload = function() {
   }
 }
 document.addEventListener('touchmove', function (e) {
+  console.log('helloooo');
   if(!$(e.target).closest('#wrapper .colorData').length){
     e.preventDefault();
-    console.log('blokams');
+    console.log('scroll area seen');
   } else {
-    console.log('ar blokams');
+    console.log('scroll area kinda seen');
   }
 }, false);
