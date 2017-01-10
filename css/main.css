@@ -550,6 +550,9 @@ body {
     max-height: 600px; } }
 
 @media only screen and (max-device-width: 470px) {
+  body {
+    width: 100vw;
+    position: fixed; }
   .mapBack {
     overflow: visible; }
   .show div {
@@ -594,10 +597,6 @@ body {
       left: -15px; }
   #map.city {
     left: -2200px; }
-  .dataButtons #next {
-    left: 340px; }
-  .dataButtons #prev {
-    left: 5px; }
   .dataPoints .info {
     height: 170px; } }
 
@@ -617,7 +616,7 @@ body {
   #banner {
     width: 122.5%;
     top: 20px;
-    left: -40px; }
+    left: -44px; }
   .bikeScene {
     left: 50px; }
   #openModal .modal-body {
@@ -720,8 +719,8 @@ body {
   .modal-dialog {
     margin: 0px; }
   #banner {
-    width: 126%;
-    left: -41px; }
+    width: 123%;
+    left: -35px; }
   .mapBack #map {
     top: -391px !important; }
   .bikeScene {

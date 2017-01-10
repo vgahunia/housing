@@ -597,7 +597,6 @@ body{
 /* ==============================================
 -------------- MEDIA QUERIES --------------------
 ================================================ */
-
 @media only screen and (max-device-width: 1024px) {
 //-------------
 // iPAD PRO
@@ -629,7 +628,6 @@ body{
     .dataPoints {margin: 120px auto;}
     #whatWorksBody .colorData {max-height: 800px;}
 }
-
 @media only screen and (max-device-width: 768px) {
 //-------------
 // iPAD
@@ -657,24 +655,19 @@ body{
 }
 
 //Cell Phones
-
 @media only screen and (max-device-width: 470px) {
-    .mapBack{
-        overflow:visible;
-      }
-    .show div{
-        width:auto;
+    body{
+        width:100vw;
+        position: fixed;
     }
+    .mapBack{overflow:visible;}
+    .show div{width:auto;}
       #banner{
         width:109%;
         left:-37px;
         z-index: 3;
       }
-    #smallBanner{
-        display:none;
-    }
-  #openModal{
-    }
+    #smallBanner{display:none;}
   .mapBack #map{
     top:-270px !important;
     width:2800px;
@@ -682,12 +675,8 @@ body{
   .bikeScene{
     top:328px;
     left:50px;
-    img{
-        width:125px;
-    }
-    .scene{
-        position: absolute;
-    }
+    img{width:125px;}
+    .scene{position: absolute;}
     #bike{
         width:136px;
         top:15px;
@@ -717,18 +706,12 @@ body{
         left:-15px;
     }
   }
-  #map.city{
-    left:-2200px;
-  }
-  .dataButtons {
-    #next{
-        left:340px;
-    }
-    #prev{
-        left:5px;
-    }
-  }
-    .dataPoints .info{height:170px;}
+  #map.city{left:-2200px;}
+  // .dataButtons {
+  //   #next{left:340px;}
+  //   #prev{left:5px;}
+  // }
+  .dataPoints .info{height:170px;}
 }
 @media only screen and (max-device-width: 414px) {
 //-------------
@@ -738,32 +721,26 @@ body{
         width:100vw;
         position: fixed;
     }
-    .show div{
-        width:auto;
-    }
+    .show div{width:auto;}
     #greenModal, #redModal, #yellowModal, #blueModal, #whatWorksModal{
         width:100vw;
         height:100%;
     }
     .mapBack{
-        #map{
-            top:0px;
+        #map{top:0px;
         }
-        #map.rural, #map.city, #map.suburb{
-            top:-650px;
+        #map.rural, #map.city, #map.suburb{top:-650px;
         }
     }
   #banner{
     width:122.5%;
     top:20px;
-    left:-40px;
+    left:-44px;
   }
   .bikeScene {
     left: 50px;
     }
   #openModal{
-    // width:440px;
-    // margin:0 auto;
     .modal-body{
         width:100%;
         padding-top: 0;
@@ -790,9 +767,7 @@ body{
     width:123%;
     left:-41px;
   }
-  #openModal{
-    width:100%;
-  }
+  #openModal{width:100%;}
   .mapBack #map{
     top:-335px !important;
     width:2800px;
@@ -800,12 +775,8 @@ body{
   .bikeScene{
     top:276px;
     left:50px;
-    img{
-        width:110px;
-    }
-    .scene{
-        position: absolute;
-    }
+    img{width:110px;}
+    .scene{position: absolute;}
     #bike{
         width:120px;
         top:15px;
@@ -835,21 +806,12 @@ body{
         left:-15px;
     }
   }
-  #map.city{
-    left:-2200px;
-  }
+  #map.city{left:-2200px;}
   .dataButtons {
-    #next{
-        left:340px;
-    }
-    #prev{
-        left:5px;
-    }
+    #next{left:340px;}
+    #prev{left:5px;}
   }
-
-  #whatWorksBody div {
-    max-height: 300px;
-  }
+  #whatWorksBody div {max-height: 300px;}
   #whatWorksBody .colorData{
     max-height: 300px;
     z-index:100;
@@ -864,9 +826,7 @@ body{
 //-------------
 //GALAXY S5
 //-------------
-    .bikeScene {
-        left: 33px;
-    }
+    .bikeScene {left: 33px;}
     .dataPoints .info {height: 90px;}
     .dataPoints .info2 {height: 175px;}
     .dataPoints {margin: 30px auto;}
@@ -895,8 +855,8 @@ body{
         margin: 0px;
     }
     #banner {
-        width: 126%;
-        left: -41px;
+        width: 123%;
+        left: -35px;
     }
     .mapBack {
         #map{
@@ -947,19 +907,15 @@ body{
 /* ==============================================
 ------------------- ANIMATION--------------------
 ================================================ */
-
 .pulse {
   -webkit-animation: pulse 2700ms linear 4 both;
   animation: pulse 2700ms linear 4 both;
 }
-
 .pulse2 {
   -webkit-animation: pulse 2700ms linear 1 both;
   animation: pulse 2700ms linear 1 both;
 }
-
 /* Generated with Bounce.js. Edit at https://goo.gl/Q4PVuV */
-
 @-webkit-keyframes pulse { 
   0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   29.31% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -975,7 +931,6 @@ body{
   87.49% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
-
 @keyframes pulse { 
   0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   29.31% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -998,8 +953,6 @@ body{
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/OQUxBZ */
-
-
 @-webkit-keyframes bounce { 
   0% { -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   2.7% { -webkit-transform: matrix3d(0.389, 0, 0, 0, 0, 0.389, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.389, 0, 0, 0, 0, 0.389, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
